@@ -211,8 +211,13 @@ short_likelihood <- likelihood |>
 bins <- names(sizeselex)[grepl("[^a-zA-Z]",  names(sizeselex), perl = TRUE)]
 
 short_sizeselex <- sizeselex |>
-  dplyr::select(dplyr::all_of(c(bins, sizesel_strata, "scenario", "Factor"))) |>
-  dplyr::filter(Factor %in% sizesel_factor) |>
+  dplyr::select(dplyr::all_of(c(bins, sizesel_strata, "scenario", "Factor", "Yr"))) |>
+  dplyr::filter(Factor %in% sizesel_factor,
+                Yr >= 1983) |>
+  dplyr::group_by(dplyr::across(dplyr::any_of(c(bins, sizesel_strata, "scenario", "Factor"))))|>
+  dplyr::mutate(block = paste0(min(Yr))) |>
+  dplyr::ungroup() |>
+  dplyr::select(-Yr) |>
   dplyr::distinct() |>
   tidyr::pivot_longer(
     cols = dplyr::all_of(bins),

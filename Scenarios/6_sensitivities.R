@@ -1,7 +1,7 @@
 library(foreach)
 
 # Specify pattern ####
-pattern <- "84_sttj.*m3$"
+pattern <- "_a_m3$|01_m3$|08a_m3$|19a_m3$|28a_m3_f2_0310$|31a_m3_f2_0310$"
 
 ## Get folder names ####
 full_names <- list.files(
@@ -13,8 +13,8 @@ full_names <- list.files(
 full_names
 
 # Choose what to run ####
-run_s1 <- TRUE
-run_s2 <- TRUE
+run_s1 <- FALSE
+run_s2 <- FALSE
 run_s3 <- TRUE
 run_s4 <- TRUE
 
@@ -155,9 +155,9 @@ foreach::foreach(i = seq_along(full_names)) %do% {
     ctl <- r4ss::SS_readctl(file = here::here(dir_s3, start$ctlfile),
                             datlist = dat, verbose = FALSE)
     
-    dat$catch[,5]
-    dat$catch[,5] = 2
-    dat$catch[,5]
+    dat$catch[1,5]
+    dat$catch[1,5] = 2
+    dat$catch[1,5]
     
     r4ss::SS_writedat(
       datlist = dat,
@@ -189,9 +189,9 @@ foreach::foreach(i = seq_along(full_names)) %do% {
     dat$N_agebins = dat$Nages
     dat$N_agebins
     
-    dat$catch[,5]
-    dat$catch[,5] = 2
-    dat$catch[,5]
+    dat$catch[1,5]
+    dat$catch[1,5] = 2
+    dat$catch[1,5]
     
     dat$agebin_vector
     dat$agebin_vector = c(0:(dat$Nages-1))

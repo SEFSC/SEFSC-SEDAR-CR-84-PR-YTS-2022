@@ -1,0 +1,383 @@
+---
+title: "Tables"
+---
+
+| Year | Metric Tons | Pounds | Handline | Other | Rod & Reel | Traps |
+|:-----:|:-----:|:----------:|:---:|:---:|:---:|:---:|
+| 1983 | 124.6 | 274,642 | 54% | 5% | 9% | 32% |
+| 1984 | 103.2 | 227,434 | 58% | 5% | 11% | 26% |
+| 1985 | 113.6 | 250,542 | 58% | 9% | 5% | 28% |
+| 1986 | 56.7 | 124,992 | 50% | 25% | 4% | 21% |
+| 1987 | 55.8 | 123,024 | 59% | 19% | 2% | 20% |
+| 1988 | 62.5 | 137,865 | 66% | 17% | 2% | 16% |
+| 1989 | 81 | 178,542 | 69% | 10% | 7% | 13% |
+| 1990 | 95.2 | 209,973 | 75% | 6% | 7% | 11% |
+| 1991 | 132.1 | 291,274 | 77% | 6% | 4% | 13% |
+| 1992 | 112.7 | 248,505 | 76% | 9% | 4% | 11% |
+| 1993 | 138.3 | 304,948 | 77% | 7% | 6% | 10% |
+| 1994 | 132 | 290,964 | 74% | 7% | 7% | 12% |
+| 1995 | 185.7 | 409,451 | 86% | 5% | 2% | 7% |
+| 1996 | 173.6 | 382,775 | 78% | 11% | 1% | 10% |
+| 1997 | 158.7 | 349,802 | 79% | 9% | 2% | 10% |
+| 1998 | 146.3 | 322,521 | 85% | 6% | 1% | 8% |
+| 1999 | 161.7 | 356,542 | 84% | 6% | 1% | 8% |
+| 2000 | 286.9 | 632,458 | 85% | 6% | 2% | 6% |
+| 2001 | 211 | 465,127 | 82% | 7% | 4% | 7% |
+| 2002 | 153.3 | 338,019 | 79% | 7% | 3% | 10% |
+| 2003 | 128 | 282,201 | 79% | 5% | 7% | 9% |
+| 2004 | 156.3 | 344,518 | 80% | 7% | 4% | 10% |
+| 2005 | 118.9 | 262,076 | 89% | 4% | 1% | 6% |
+| 2006 | 124.6 | 274,593 | 91% | 3% | 0% | 6% |
+| 2007 | 93.6 | 206,437 | 92% | 4% | 0% | 4% |
+| 2008 | 169.5 | 373,610 | 95% | 3% | 0% | 2% |
+| 2009 | 101 | 222,592 | 88% | 3% | 1% | 8% |
+| 2010 | 97.4 | 214,799 | 90% | 2% | 1% | 7% |
+| 2011 | 67.9 | 149,589 | 85% | 7% | 1% | 7% |
+| 2012 | 94.4 | 208,152 | 83% | 7% | 1% | 9% |
+| 2013 | 59.5 | 131,267 | 85% | 4% | 2% | 9% |
+| 2014 | 87.5 | 192,808 | 88% | 3% | 1% | 8% |
+| 2015 | 80.6 | 177,591 | 88% | 2% | 1% | 8% |
+| 2016 | 85.3 | 188,121 | 89% | 3% | 1% | 7% |
+| 2017 | 56.9 | 125,338 | 87% | 4% | 2% | 7% |
+| 2018 | 67.7 | 149,199 | 85% | 6% | 1% | 8% |
+| 2019 | 74.5 | 164,293 | 87% | 6% | 0% | 7% |
+| 2020 | 56.3 | 124,185 | 78% | 14% | 0% | 7% |
+| 2021 | 67.6 | 148,981 | 76% | 16% | 0% | 9% |
+| 2022 | 79.3 | 174,936 | 78% | 14% | 1% | 8% |
+| Total | 4,551.7 | 10,034,686 | 80% | 7% | 3% | 10% |
+
+: Commercial landings of Yellowtail Snapper reported in Puerto Rico from 1983 - 2022 in metric tons and pounds by year, along with the percentage of the total commercial landings that came from each gear group. {#tbl-catch}
+
+{{< pagebreak >}}
+
+| Input Source | Input Type | Input | M | Method |
+|:-------------|:----------|:-------:|:--:|:--------|
+| @sedar2020 | Maximum age | 28 | **0.180** | Hamel_Amax |
+| @riverahernández2024 | Maximum age | 20 | **0.270** | Hamel_Amax |
+| Meta-analysis | Scientific name | *Ocyurus chrysurus* | 0.348 | FishLife |
+
+: Empirical estimates of natural mortality (M) derived using life history information and the Natural Mortality Tool [@cope2022]. All models included in this report utilize the natural mortality estimate of 0.208 corresponding with the maximum age observed by @riverahernández2024, except two of the sensitivity scenarios (s2 and s4) which utilize the 0.193 natural morality corresponding with the estimated maximum age from @sedar2020. {#tbl-m}
+
+{{< pagebreak >}}
+
+| Stage | Code | Sequential modeling steps |
+|--------|:----:|----------------------------------------------------------------|
+| Initial | ct | model initialized with continuum tool (ct) |
+| Initial | m1 | ct + adjusted size at age zero |
+| Initial | m2 | m1 + continuous recruitment |
+| Initial | m3 | m2 + catch uncertainty |
+| Scenario | null | catch and super-year size data |
+| Scenario | a | index |
+| Scenario | v1 | index + annual fishery-independent size data |
+| Scenario | v8 | index + annual fishery-independent size data + dome-shaped selectivity |
+| Scenario | v19 | index + annual fishery-independent size data + dome-shaped selectivity + recruitment deviations |
+| Scenario | v26 | index + annual size data + dome-shaped selectivity + recruitment deviations |
+| Scenario | v29 | index + annual fishery-independent size data + dome-shaped selectivity + recruitment deviations + time block |
+| Scenario | v31 | index + annual size data + dome-shaped selectivity + recruitment deviations + time block |
+| Sensitivity | s1 | higher CV on growth young |
+| Sensitivity | s2 | higher age and lower m |
+| Sensitivity | s3 | higher catch uncertainty |
+| Sensitivity | s4 | s2 + s3 |
+
+: Summary of process and naming conventions used across different model development stages of the SEDAR 84 Puerto Rico Yellowtail Snapper stock assessment. {#tbl-ss3-dev}
+
+{{< pagebreak >}}
+
+```{r}
+#| echo: false
+#| warning: false
+#| label: tbl-corr
+#| tbl-cap: "Puerto Rico Yellowtail Snapper correlations between estimated parameters across the m3 model scenarios. The table shows correlations greater than 0.9 or less than -0.9. Correlations that are greater than 0.95 or less than -0.95 are shown in red. NOTE RUN M2 FOR 31, 28, 19 and 8."
+
+library(here)
+library(dplyr)
+library(flextable)
+
+pattern <- c(
+ "a_m2", "v01_m2", 
+ "a_m3", "v01_m3", "v08a_m3", "v19a_m3", "v28a_m3_f2_0310", "v31a_m3_f2_0310"
+ )
+cutout <- "_f2_0310"
+
+
+short_covar <- read.csv(here::here("Scenarios", "scenarios_covar.csv")) |>
+ dplyr::filter(scenario %in% pattern) |>
+ dplyr::mutate(scenario = stringr::str_remove(scenario, cutout)) |>
+ dplyr::mutate(
+  label.i = dplyr::case_when(
+   label.i == "Size_DblN_ascend_se_Commercial(1)" ~ 
+    "Commercial Sel. Asend.",
+   label.i == "Size_DblN_top_logit_NCRMP(2)" ~ "NCRMP Sel. Top",          
+   label.i == "Size_DblN_ascend_se_Commercial(1)_BLK1repl_1983" ~ 
+    "Commercial Sel. Asend. 1983",
+   label.i == "Size_DblN_ascend_se_Commercial(1)_BLK1repl_2004" ~ 
+    "Commercial Sel. Asend. 2004"
+  ),
+  label.j = dplyr::case_when(
+   label.j == "Size_DblN_peak_Commercial(1)" ~ "Commercial Sel. Peak",
+   label.j == "Size_DblN_peak_NCRMP(2)" ~ "NCRMP Sel. Peak",
+   label.j == "Size_DblN_peak_Commercial(1)_BLK1repl_1983" ~ "Commercial Sel. Peak 1983",
+   label.j == "Size_DblN_peak_Commercial(1)_BLK1repl_2004" ~ "Commercial Sel. Peak 2004"
+  )
+ )
+
+var_corr <- c(
+ "Scenario",
+ "Estimated Parameters", 
+ "Estimated Parameters", 
+ "Correlation\nCoefficient")
+
+tbl_corr <- short_covar |>
+ #dplyr::filter(stringr::str_detect(scenario, "m2$|m3$" )) |>
+ flextable::flextable() |>
+ flextable::autofit() |>
+ flextable::align(align = "center", part = "all") |>
+ flextable::set_header_labels(values = var_corr) |>
+ flextable::merge_h(part = "header") |>
+ flextable::color(color = "red", j = "corr", i = ~ abs(corr) > 0.95) |>
+ flextable::fontsize(size = 11, part = "all") |>
+ flextable::font(fontname = "Times New Roman", part = "all")
+
+tbl_corr
+
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-dq
+#| tbl-cap: "Puerto Rico Yellowtail Snapper derived quantities for unfished and initial spawning stock biomass in metric tons (mt) along with standard deviations (SD) and coefficient of variation (CV) by model scenario (a_m3, v01_m3, v08_m3, v19_m3, v28_m3, v31_m3). CV is calculated as the SD divided by the parameter estimate."
+
+pattern <- "^a_m3$|v01_m3$|v08a_m3$|v19a_m3$|v28a_m3_f2_0310$|v31a_m3_f2_0310$"
+cutout <- "_f2_0310"
+
+est_dq <- read.csv(here::here("Scenarios", "scenarios_dq.csv")) |>
+ dplyr::mutate(
+  Parameter = dplyr::case_when(
+   Parameter == "SSB_Initial" ~ "SSB Initial (mt)",
+   Parameter == "Bratio_2012" ~ "Ratio SSB Initial:Unfished",
+   Parameter == "SSB_unfished" ~ "SSB Unfished (mt)"
+  )
+ ) |>
+ dplyr::select(Parameter, Scenario, Estimate, SD, CV) |>
+ dplyr::arrange(desc(Parameter), Scenario) |>
+ dplyr::filter(stringr::str_detect(Scenario, pattern)) |>
+ dplyr::mutate(Scenario = stringr::str_remove(Scenario, cutout))
+
+
+tbl_dq <- est_dq |>
+ dplyr::rename("Derived Quantity" = Parameter) |>
+ flextable::flextable() |>
+ flextable::autofit() |>
+ flextable::theme_box() |>
+ flextable::align(align = "center", part = "all") |>
+ flextable::merge_v(j = "Derived Quantity") |>
+ flextable::fontsize(size = 11, part = "all") |>
+ flextable::font(fontname = "Times New Roman", part = "all")
+
+tbl_dq
+
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-eqcatch
+#| tbl-cap: "Puerto Rico Yellowtail Snapper estimated initial equilibrium catch in metric tons by model scenario including across sensitivity runs. The input value was 168 metric tons with a standard error of 0.3."
+
+pattern <- "^a_m3|v01_m3|v08a_m3|v19a_m3|v28a_m3_f2_0310|v31a_m3_f2_0310"
+cutout <- "_f2_0310"
+ 
+est_eqcatch_short <- read.csv(here::here("Scenarios", "eq_catch.csv")) |>
+ dplyr::mutate(Estimate = round(Estimate, 2)) |>
+ #dplyr::filter(!stringr::str_detect(Scenario, "ct|m1" )) |>
+ dplyr::filter(stringr::str_detect(Scenario, pattern )) |>
+ dplyr::mutate(Scenario = stringr::str_remove(Scenario, cutout),
+        Estimate = round(Estimate, 1)) |>
+ tidyr::separate(Scenario, c('run', 'Scenario'), sep = "_", extra = "merge") |>
+ tidyr::pivot_wider(
+  names_from = c(run),
+  values_from = c(Estimate))
+ 
+tbl_eqcatch <- est_eqcatch_short |>
+ flextable::flextable() |>
+ flextable::autofit() |>
+ flextable::theme_box() |>
+ flextable::align(align = "center", part = "all") |>
+ flextable::merge_v(j = "Parameter") |>
+ flextable::fontsize(size = 11, part = "all") |>
+ flextable::font(fontname = "Times New Roman", part = "all")
+
+tbl_eqcatch
+
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-parm
+#| tbl-cap: "Puerto Rico Yellowtail Snapper parameters, standard deviations (SD), and coefficient of variation (CV) by model scenario (a_m3, v01_m3, v08_m3, v19_m3, v28_m3, v31_m3). CV is calculated as the SD divided by the parameter estimate."
+
+pattern <- "^a_m3|v01_m3|v08a_m3|v19a_m3|v28a_m3_f2_0310|v31a_m3_f2_0310"
+cutout <- "_f2_0310"
+
+est_parm_short <- read.csv(here::here("Scenarios", "scenarios_parm.csv")) |>
+ dplyr::filter(stringr::str_detect(Scenario, pattern )) |>
+ dplyr::mutate(Scenario = stringr::str_remove(Scenario, cutout)) |>
+ dplyr::mutate(
+  Parameter = dplyr::case_when(
+   Parameter == "SR_LN(R0)" ~ "Unfished Recruitment (R0)",
+   Parameter == "InitF_seas_1_flt_1Commercial" ~ "Initial F",
+   Parameter == "Size_DblN_ascend_se_Commercial(1)" ~ "Commercial Sel. Asend.",
+   Parameter == "Size_DblN_peak_Commercial(1)" ~ "Commercial Sel. Peak",
+   Parameter == "Size_DblN_ascend_se_Commercial(1)_BLK1repl_1983" ~ "Commercial Sel. Asend.\n1983 - 2003",
+   Parameter == "Size_DblN_peak_Commercial(1)_BLK1repl_1983" ~ "Commercial Sel. Peak\n1983 - 2003",
+   Parameter == "Size_DblN_ascend_se_Commercial(1)_BLK1repl_2004" ~ "Commercial Sel. Asend.\n2004 - 2010",
+   Parameter == "Size_DblN_peak_Commercial(1)_BLK1repl_2004" ~ "Commercial Sel. Peak\n2004 - 2010",
+   Parameter == "Size_DblN_peak_NCRMP(2)" ~ "NCRMP Sel. Peak",     
+   Parameter == "Size_DblN_top_logit_NCRMP(2)" ~ "NCRMP Sel. Top",    
+   Parameter == "Size_DblN_end_logit_NCRMP(2)" ~ "NCRMP Sel. End",     
+   Parameter == "Size_DblN_ascend_se_NCRMP(2)" ~ "NCRMP Sel. Asend."
+  )
+ ) |>
+ dplyr::select(Parameter, Scenario, Estimate, SD, CV, Gradient) |>
+ dplyr::arrange(Parameter, Scenario) |>
+ dplyr::filter(stringr::str_detect(Scenario, "\\w*m3$")) |>
+ dplyr::mutate(Gradient = format(Gradient, scientific = TRUE, digits = 2))
+
+
+tbl_parm <- est_parm_short |>
+ flextable::flextable() |>
+ flextable::autofit() |>
+ flextable::theme_box() |>
+ flextable::align(align = "center", part = "all") |>
+ flextable::merge_v(j = "Parameter") |>
+ flextable::fontsize(size = 11, part = "all") |>
+ flextable::font(fontname = "Times New Roman", part = "all")
+
+tbl_parm
+
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-est-msy
+#| tbl-cap: "Puerto Rico Yellowtail Snapper derived quantities of the MSY proxy (based on SPR 40%) in metric tons by model scenario (a_m3, v01_m3, v08_m3, v19_m3, v28_m3, v31_m3) and corresponding each model scenario's four sensitivity runs. CV is calculated as the SD divided by the parameter estimate. Estimates of the MSY proxy are also presented in pounds in @tbl-msy."
+
+pattern <- "^a_m3|v01_m3|v08a_m3|v19a_m3|v28a_m3_f2_0310|v31a_m3_f2_0310"
+cutout <- "_f2_0310"
+
+est_msy <- read.csv(here::here("Scenarios", "est_msy.csv")) |>
+ dplyr::filter(stringr::str_detect(Scenario, pattern )) |>
+ dplyr::mutate(Scenario = stringr::str_remove(Scenario, cutout)) |>
+ #dplyr::filter(!stringr::str_detect(Scenario, "ct|m1" )) |>
+ dplyr::rename("MSY Proxy" = Estimate)
+
+
+tbl_est_msy <- est_msy |>
+ flextable::flextable() |>
+ flextable::autofit() |>
+ flextable::theme_box() |>
+ flextable::align(align = "center", part = "all") |>
+ flextable::fontsize(size = 11, part = "all") |>
+ flextable::font(fontname = "Times New Roman", part = "all")
+
+tbl_est_msy
+
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-msy
+#| tbl-cap: "Puerto Rico Yellowtail Snapper derived quantities of the MSY proxy (based on SPR 40%) in pounds by model scenario (a_m3, v01_m3, v08_m3, v19_m3, v28_m3, v31_m3) and corresponding each model scenario's four sensitivity runs."
+
+pattern <- "^a_m3|v01_m3|v08a_m3|v19a_m3|v28a_m3_f2_0310|v31a_m3_f2_0310"
+cutout <- "_f2_0310"
+
+scenarios_summary <- read.csv(here::here("Scenarios", "scenarios_summary.csv")) |>
+ dplyr::select(scenario, Dead_Catch_SPR_lbs) |>
+ dplyr::filter(stringr::str_detect(scenario, pattern )) |>
+ dplyr::mutate(scenario = stringr::str_remove(scenario, cutout)) |>
+ #dplyr::filter(!stringr::str_detect(scenario, "ct|m1" )) |>
+ tidyr::separate(scenario, c('run', 'Scenario'), sep = "_", extra = "merge") |>
+ tidyr::pivot_wider(
+  names_from = c(run),
+  values_from = c(Dead_Catch_SPR_lbs))
+
+tbl_msy <- scenarios_summary |>
+ flextable::flextable() |>
+ flextable::autofit() |>
+ flextable::theme_box() |>
+ flextable::align(align = "center", part = "all") |>
+ flextable::fontsize(size = 11, part = "all") |>
+ flextable::font(fontname = "Times New Roman", part = "all")
+
+tbl_msy
+
+```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: tbl-msra
+#| tbl-cap: "Puerto Rico Yellowtail Snapper fishing mortality rate and spawning stock biomass ratios relative to the rate and biomass of the stock associated with the MSY proxy (based on SPR 40%). The relative fishing mortality ratio is expressed as a three-year geometric mean of the annual fishing mortality rates for 2020-2022 divided by the fishing mortality rate associated with MSY SPR 40%. Relative fishing mortality rates that are above one are shown in red font. The relative stock biomass ratio is expressed as the 2022 spawning biomass divided by the spawning stock biomass at MSY SPR 40%. Relative fishing mortality ratios that are below 0.75 are shown in red font."
+
+pattern <- "^a_m3|v01_m3|v08a_m3|v19a_m3|v28a_m3_f2_0310|v31a_m3_f2_0310"
+cutout <- "_f2_0310"
+
+spr_f_summary <- read.csv(here::here("Scenarios", "scenarios_summary.csv")) |>
+ dplyr::select(scenario, Fcurrent_FSPR) |>
+ dplyr::mutate(Fcurrent_FSPR = round(Fcurrent_FSPR, 2)) |>
+ dplyr::filter(stringr::str_detect(scenario, pattern )) |>
+ dplyr::mutate(scenario = stringr::str_remove(scenario, cutout)) |>
+ #dplyr::filter(!stringr::str_detect(scenario, "ct|m1" )) |>
+ tidyr::separate(scenario, c('run', 'Scenario'), sep = "_", extra = "merge") |>
+ tidyr::pivot_wider(
+  names_from = c(run),
+  values_from = c(Fcurrent_FSPR)) |>
+ dplyr::mutate(Metric = "F Current /\nF SPR 40%")
+
+spr_ssb_summary <- read.csv(here::here("Scenarios", "scenarios_summary.csv")) |>
+ dplyr::select(scenario, SSB2022_SSBSPR) |>
+ dplyr::mutate(SSB2022_SSBSPR = round(SSB2022_SSBSPR, 2)) |>
+ dplyr::filter(stringr::str_detect(scenario, pattern )) |>
+ dplyr::mutate(scenario = stringr::str_remove(scenario, cutout)) |>
+ #dplyr::filter(!stringr::str_detect(scenario, "ct|m1" )) |>
+ tidyr::separate(scenario, c('run', 'Scenario'), sep = "_", extra = "merge") |>
+ tidyr::pivot_wider(
+  names_from = c(run),
+  values_from = c(SSB2022_SSBSPR)) |>
+ dplyr::mutate(Metric = "SSB 2022 /\nSSB SPR 40%")
+
+msra_summary = rbind(spr_f_summary, spr_ssb_summary) |>
+ dplyr::relocate(Metric) 
+ 
+
+tbl_msra <- msra_summary |>
+ flextable::flextable() |>
+ flextable::autofit() |>
+ flextable::theme_box() |>
+ flextable::merge_v(j = "Metric") |>
+ flextable::align(align = "center", part = "all") |>
+ flextable::fontsize(size = 11, part = "all") |>
+ flextable::color(color = "red", i = ~ a > 1 & Metric == "F Current /\nF SPR 40%", j = "a") |>
+ flextable::color(color = "red", i = ~ v01 > 1 & Metric == "F Current /\nF SPR 40%", j = "v01") |>
+ flextable::color(color = "red", i = ~ v08a > 1 & Metric == "F Current /\nF SPR 40%", j = "v08a") |>
+ flextable::color(color = "red", i = ~ v19a > 1 & Metric == "F Current /\nF SPR 40%", j = "v19a") |>
+ flextable::color(color = "red", i = ~ v28a > 1 & Metric == "F Current /\nF SPR 40%", j = "v28a") |>
+ flextable::color(color = "red", i = ~ v31a > 1 & Metric == "F Current /\nF SPR 40%", j = "v31a") |>
+ flextable::align(align = "center", part = "all") |>
+ flextable::fontsize(size = 11, part = "all") |>
+ flextable::color(color = "red", i = ~ a < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "a") |>
+ flextable::color(color = "red", i = ~ v01 < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "v01") |>
+ flextable::color(color = "red", i = ~ v08a < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "v08a") |>
+ flextable::color(color = "red", i = ~ v19a < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "v19a") |>
+ flextable::color(color = "red", i = ~ v28a < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "v28a") |>
+ flextable::color(color = "red", i = ~ v31a < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "v31a") |>
+ flextable::font(fontname = "Times New Roman", part = "all")
+
+tbl_msra
+
+```

@@ -1,0 +1,21 @@
+---
+title: "Discussion"
+---
+
+This assessment presents a series of model configurations developed to address key uncertainties in both the data and model structure, using an integrated framework to evaluate the stock status of Yellowtail Snapper in St. Thomas and St. John. Across the wide range of scenarios explored, all model configurations consistently indicated that the stock is not overfished and that overfishing is not occurring (@tbl-msra). However, diagnostics and sensitivity analyses revealed important caveats, primarily due to the strong influence of fixed parameter assumptions including initial conditions and growth.
+
+A major source of uncertainty stems from unknown initial catch levels, which are strongly tied to the resulting levels of sustainable yield. Because these dynamics remain confounded we strongly recommend either extending the catch history if a reliable catch time series extending back to the unexploited state is available or exploring methods that decouple the estimation of initial fishing mortality and starting year depletion level.
+
+Among all sensitivity analyses, assumptions about historical catch levels had the greatest influence on model outcomes. These results highlight the importance of structured sensitivity testing to better understand how uncertainty affects model results. Future research should explore the use of model grids or ensemble approaches to formally incorporate uncertainty and improve the reliability of management advice.
+
+Growth is a key biological input that influences estimates of stock productivity and selectivity. In this assessment, the size of Yellowtail Snapper observed by the Trip Interview Program, and used to inform the commercial fleet’s selectivity, suggest that the estimated average size at maximum age may be too low. Alternative growth curves should be considered, potentially by incorporating broader regional data sets and accounting for the size and age distribution of samples when refitting growth. Since maximum observed sizes appear comparable across regions (@sedar2020), revisiting the growth parameter inputs could strengthen the biological realism and performance of future assessments.
+
+Recruitment deviations, when estimated, were particularly uncertain, given the limited years of available data. However, the availability of fishery-independent length data from the NCRMP and DCRMP surveys provides a valuable information source. The observed abundance of small fish may allow better inference of recruitment in future assessments. Finer resolution data (e.g., using 1 cm bins for specific years) could improve model performance and reduce uncertainty.
+
+Integrated models such as Stock Synthesis are powerful not only for synthesizing multiple data sources but also for making key assumptions explicit and testable. Without this flexibility, assessments risk producing outputs that must be taken at face value, with little opportunity to evaluate the effects of underlying assumptions.
+
+While not every species will have sufficient data for an integrated assessment, wherever possible, structured scenario testing should be pursued to explore alternative hypotheses and better understand the drivers of population dynamics. Such efforts strengthen the scientific foundation for management advice and help balance the need for both rigorous and practical assessment frameworks.
+
+This assessment assumes an open population with recruitment not tightly linked to local spawning stock. This assumption could benefit from future exploration of regional connectivity, as it has implications for both model structure and management scale. If connectivity across islands is strong, larger-scale stock definitions or spatially explicit metapopulation modeling approaches may be warranted.
+
+Finally, the stepwise modeling approach used in this assessment offers a framework that could be applied to other Caribbean species. Expanding the approach through targeted data collection and method development could improve the timeliness and robustness of stock assessments across the region. This will require continued support for long-term monitoring programs, higher-resolution data collection, and investment in model development and bridging exercises to deliver science-based, real-time management advice.

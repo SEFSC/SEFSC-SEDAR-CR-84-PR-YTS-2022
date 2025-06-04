@@ -1,0 +1,29 @@
+---
+  title: "SEDAR Panel Research Recommendations"
+---
+
+To mitigate some of the data uncertainties it is recommended to:
+
+-   Expand fishery-independent survey time series and resolution (e.g., retain and use 1-cm length bin data where available).
+
+-   Further evaluate natural mortality and growth assumptions. Collect and analyze additional life history data to evaluate the accuracy around growth and natural mortality rates.
+
+-   Conduct focused research on historical catches and fishing history to inform and constrain early model conditions.
+
+-   Consider using simpler production models or age-structured models with fixed selectivity to isolate and evaluate different data inputs.
+
+-   Develop and evaluate model ensembles or uncertainty grids to guide catch advice under different plausible scenarios.
+
+-   Investigate stock connectivity to better understand local vs. regional recruitment dynamics.
+
+-   Research methods, including simulations, to “right-size” model complexity to match data availability, avoiding overparameterization in data-limited contexts.
+
+-   Support Management Strategy Evaluations that are robust to key uncertainties to guide harvest advice.
+
+-   Ensure the continuation of fishery-independent survey programs (e.g., National Coral Reef Monitoring Program) with consistent spatial and temporal coverage.
+
+-   Maintain and expand commercial catch monitoring programs. Expand port sampling and other fishery-dependent data collection to fill gaps in length composition and effort data.
+
+-   The use of initial catch in this assessment was intended to inform an initial starting depletion for the population. However, model evaluations show it also strongly informs maximum sustainable yield estimates. This is an undesirable outcome and additional research into how to decouple these impacts would significantly improve model result reliability. 
+
+-   Investigate data on the sizes of discarded fish to inform size-based retention. Explore parameterizing retention to improve selectivity of the commercial fleet and interpret the apparent high selectivity of larger individuals that are poorly estimated by the current models.

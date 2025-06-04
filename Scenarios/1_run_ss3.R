@@ -7,6 +7,12 @@
 # Specify pattern and plots (plot 12 fails when using seasonal recruitment)
 pattern <- "_a_m3|01_m3|08a_m3|19a|28a_m3_f2|31a_m3_f2"
 pattern <- "03_m3|07_m3|19a_m3|26a_m3|29a_m3|31a_m3"
+pattern <- "m3_s|10_s"
+pattern <- "_s3$|_s4$"
+pattern <- "v19a_m3_s2"
+pattern <- "v19a_m3$"
+pattern <- "_m2_f2|19a_m3$|19a_m2$|08a_m2$"
+pattern <- "19a_m3$"
 
 plots <- c(1:26)
 minbthresh <- -1

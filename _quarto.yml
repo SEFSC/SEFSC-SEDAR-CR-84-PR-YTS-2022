@@ -1,0 +1,96 @@
+project: 
+  type: book
+  output-dir: docs
+
+book: 
+  page-navigation: true
+  title: "SEDAR 84" 
+  site-url: "https://sturdy-adventure-166n52z.pages.github.io/" 
+  repo-url: "https://github.com/SEFSC/SEFSC-SEDAR-CR-84-STTJ-YTS-2022"
+  repo-actions: [edit, source, issue]
+  favicon: assets/favicon.ico
+  downloads: [pdf, docx]
+  search: true
+  author:
+    - name: Southeast Fisheries Science Center
+      affiliations:
+        - name: NOAA Fisheries
+  chapters:
+    - index.qmd
+    - content/introduction.qmd
+    # - content/data.qmd
+    - content/methods.qmd
+    # - content/diagnostics.qmd
+    # - content/discussion.qmd
+    - content/research.qmd
+    - content/tables.qmd
+    - content/figures.qmd
+    - content/references.qmd
+
+  page-footer:
+    right: "This page is built with [Quarto](https://quarto.org/)."
+    left: "&copy; CC-1.0"
+  
+  sidebar:
+    background: "#D9E3E4"
+    logo: "https://raw.githubusercontent.com/nmfs-opensci/assets/main/logo/nmfs-opensci-logo3.png"
+    favicon: images/favicon.ico
+    pinned: true
+    align: center
+    tools: 
+      - icon: globe
+        href: https://nmfs-opensci.github.io
+        text: "NMFS Open Science"
+    style: "docked"
+    search: true
+    collapse-level: 1
+
+bibliography: [content/references.bib]
+csl: apa.csl
+
+execute:
+  echo: false
+  code-overflow: wrap
+  
+
+
+format:
+  pdf:
+    toc: true
+    toc-depth: 3
+    include-in-header: 
+      - text: |
+          \raggedright
+          \usepackage{caption}
+          \usepackage{fancyhdr}
+          \pagestyle{fancy}
+          \captionsetup[table]{justification=raggedright, format=plain, indention=1em, singlelinecheck=false}
+          \captionsetup[figure]{justification=raggedright, format=plain, indention=1em, singlelinecheck=false}
+          \fancypagestyle{plain}{
+            \fancyhf{}% Clear header/footer
+            \renewcommand{\headrulewidth}{0pt}
+            \fancyhead[LE, LO]{July 2025}
+            \fancyhead[RE, RO]{US Caribbean Yellowtail Snapper – Puerto Rico}
+            \fancyfoot[LE, LO]{SEDAR 84 SAR Section III}
+            \fancyfoot[RE, RO]{Assessment Process Report}
+            \fancyfoot[CE, CO]{\thepage}
+          }
+          \pagestyle{plain}% Set page style to plain.
+  html:
+    theme: [cosmo, assets/theme.scss] 
+    toc: true
+    toc-depth: 3
+    default-image-extension: png
+    include-in-header: 
+      - text: |
+          <style>table {padding: 2em 0 2em 0}</style>
+          <style>figure {padding: 2em 0 2em 0}</style>
+          
+
+filters:
+  - assets/include-files.lua
+  - quarto
+
+# Comment next 2 lines if the PDF is having trouble
+# metadata-files:
+#   - _frontmatter.yml

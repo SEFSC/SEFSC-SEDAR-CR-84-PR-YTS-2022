@@ -1,0 +1,17 @@
+---
+title: "Background"
+---
+
+The stoplight parrotfish (*Sparisoma viride*) is a sequential protogynous hermaphrodite that inhabits coral reefs in the Caribbean Sea, Florida, Gulf of Mexico, Bermuda, and Brazil. It is an herbivorous species that is targeted in reef fish fisheries throughout much of the Caribbean, including St. Croix, USVI.
+
+## Management {#sec-background-managment}
+
+St. Croix stoplight parrotfish is managed under the St. Croix Fishery Management Plan [@crabtree]. In 2023, the Caribbean Fisheries Management Council transitioned from species-based to island-based fisheries management (@fig-uscar). The management measures in the new island-based fishery management plans became effective on October 13, 2022.
+
+The Parrotfish Two stock complex includes two indicator stocks and five other species. The indicator species are stoplight parrotfish and redtail parrotfish (*Sparisoma chrysopterum*). The allowable biological catch for the complex was established using Tier 4a of the 4-tiered control rule. The allowable biological catch and the annual catch limit are 85,135 and 72,365 pounds whole weight, respectively.
+
+A SEDAR 84 Data Workshop working paper summarizes federal management actions for stoplight parrotfish in St. Croix [@malone2024]. On August 29, 2013, a 9-inch federal size limit was instituted by Final Regulatory Amendment 4. The size limit only applies to the U.S. Exclusive Economic Zone surrounding St. Croix, which is defined as the federal waters ranging from 3 to 200 nautical miles (nm) (5.6 – 370 kilometers \[km\]) from the nearest coastline point of the U.S. Virgin Islands (@fig-eez).
+
+## Assessment History {#sec-background-history}
+
+Before the current assessment, only one stock assessment had been attempted for St. Croix stoplight parrotfish [@sedar2016]. The SEDAR 46 evaluations were performed using the Data-Limited Methods Toolkit [@carruthers2018]. The approach applied data-limited stock assessment models and management procedures. Ultimately, the results were not used for management advice.

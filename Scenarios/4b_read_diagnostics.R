@@ -1,7 +1,7 @@
 library(foreach)
 
 # Specify pattern ####
-pattern <- "84_sttj_f3_3cm_020556_0056_v4_m3"
+pattern <- "84_pr_f3_3cm_0648_0056_v01_m3"
 retro_years <- c(0:-5)
 jitter_iterations <- 30
 

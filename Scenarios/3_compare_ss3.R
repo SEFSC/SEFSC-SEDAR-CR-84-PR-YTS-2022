@@ -1,5 +1,5 @@
 # Specify pattern of runs (ex: "84_stx", "m2$")
-pattern <- "_a_m3|01_m3|08a_m3|19a|28a_m3_f2|31a_m3_f2"
+pattern <- "_a_m3$|01_m3$|08a_m3$|19a_m3$|28a_m3_f2_0310$|31a_m3_f2_0310$"
 folder_name <- "m3"
 
 # Specify cutout string to match short names in scenarios.csv
@@ -79,7 +79,8 @@ r4ss::SSplotComparisons(
 short_sizeselex <- read.csv(
   here::here("Scenarios", "scenarios_size_selex.csv")
 ) |>
-  dplyr::filter(scenario %in% short_names)
+  dplyr::filter(scenario %in% short_names) |>
+  dplyr::mutate(block = as.factor(block))
 
 # Plot selectivity
 plot_sizeselex <- function(
@@ -88,7 +89,7 @@ plot_sizeselex <- function(
   factors = c("Lsel"),
   sizesel_file = "",
   aes_color = "scenario",
-  aes_lty = "Factor"
+  aes_lty = "block"
 ) {
 
   short_sizeselex |>

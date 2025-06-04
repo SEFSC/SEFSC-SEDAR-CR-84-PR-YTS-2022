@@ -1,0 +1,258 @@
+---
+title: "Figures"
+---
+
+![Puerto Rico Yellowtail Snapper commercial fleet and NCRMP survey selectivity across model scenarios (a_m3, v01_m3, v08_m3, v19_m3, v28_m3,  v31_m3).](/Scenarios/plots_m3/sizeselex.png){#fig-m3-selectivity}
+
+::: {#fig-selectivity-block layout-ncol="2"}
+![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/plots/sel03_len_timevary_surf_flt1sex1.png)
+
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/plots/sel03_len_timevary_surf_flt1sex1.png)
+
+Puerto Rico Yellowtail Snapper commercial fleet logistic selectivity across model scenarios with time blocks (v28_m3 and  v31_m3).
+:::
+
+::: {#fig-m3-density layout-ncol="2"}
+![Unfished recruitment](/Scenarios/plots_m3/compare16_densities_SR_LN(R0).png){#fig-m3-r0}
+
+![Virgin Spawning Stock Biomass](/Scenarios/plots_m3/compare16_densities_SSB_Virgin.png){#fig-m3-ssb-par}
+
+Puerto Rico Yellowtail Snapper parameter distribution for (a) the natural log of the unfished recruitment parameter of the Beverton – Holt stock-recruit function and (b) virgin spawning stock biomass in metric tons across model scenarios (a_m3, v01_m3, v08_m3, v19_m3, v28_m3,  v31_m3).
+:::
+
+::: {#fig-m3-dq layout-ncol="2"}
+![Spawning Biomass Ratio](/Scenarios/plots_m3_plain/compare4_Bratio_uncertainty.png){#fig-m3-ratio}
+
+![Spawning Biomass](/Scenarios/plots_m3_plain/compare2_spawnbio_uncertainty.png){#fig-m3-ssb}
+
+![Fishing Mortality](/Scenarios/plots_m3/compare8_Fvalue_uncertainty.png){#fig-m3-f}
+
+![Recruitment](/Scenarios/plots_m3_plain/compare10_recruits_uncertainty.png){#fig-m3-recruits}
+
+Puerto Rico Yellowtail Snapper derived quantity time series across model scenarios (a_m3, v01_m3, v08_m3, v19_m3, v28_m3,  v31_m3). Derived quantities plotted over time for (a) the relative spawning stock biomass (total biomass / virgin spawning stock biomass),  (b) spawning stock biomass in metric tons, (c) fishing mortality (total biomass killed / total biomass), (d) and recruitment in thousands of fish. The shaded areas and vertical bars in the derived quantities time series represent 95% confidence intervals. The values plotted prior to the model start year of 2012 reflect the unfished conditions and associated 95% confidence intervals.
+:::
+
+::: {#fig-jitter layout-ncol="3"}
+![Model a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/jitter/Total_Likelihood.png)
+
+![Model v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/jitter/Total_Likelihood.png)
+
+![Model v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/jitter/Total_Likelihood.png)
+
+![Model v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/jitter/Total_Likelihood.png)
+
+![Model v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/jitter/Total_Likelihood.png)
+
+![Model v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/jitter/Total_Likelihood.png)
+
+Puerto Rico Yellowtail Snapper jitter analysis total likelihood across model scenarios (a_m3, v01_m3, v08_m3, v19_m3, v28_m3,  v31_m3). Each panel gives the results of 30 runs of the corresponding model scenario where the starting parameter values for each run were randomly changed by 20% from each model's predicted values using a uniform distribution in cumulative normal space.
+:::
+
+::: {#fig-cpue2 layout-ncol="3"}
+![va_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/plots/index2_cpuefit_NCRMP.png)
+
+![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/plots/index2_cpuefit_NCRMP.png)
+
+![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/plots/index2_cpuefit_NCRMP.png)
+
+![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/plots/index2_cpuefit_NCRMP.png)
+
+![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/plots/index2_cpuefit_NCRMP.png)
+
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/plots/index2_cpuefit_NCRMP.png)
+
+Puerto Rico Yellowtail Snapper National Coral Reef Monitoring Program (NCRMP) observed (open circles) and predicted (blue line) indices of relative abundance and associated standard errors across model scenarios (a_m3, v01_m3, v08_m3, v19_m3, v28_m3,  v31_m3). Error bars indicate a 95% uncertainty interval around observed index values based on the model assumption of lognormal error. Model scenarios a_m3, v01_m3, v08_m3, and v28_m3 do not estimate recruitment deviations, while model scenarios v19_m3 and v31_m3 do.
+:::
+
+::: {#fig-meanlen-ncrmp layout-ncol="3"}
+![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/plots/comp_lenfit_data_weighting_TA1-8_NCRMP.png)
+
+![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/plots/comp_lenfit_data_weighting_TA1-8_NCRMP.png)
+
+![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/plots/comp_lenfit_data_weighting_TA1-8_NCRMP.png)
+
+![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/plots/comp_lenfit_data_weighting_TA1-8_NCRMP.png)
+
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/plots/comp_lenfit_data_weighting_TA1-8_NCRMP.png)
+
+Puerto Rico Yellowtail Snapper observed (open circles) and predicted (blue line) mean length in centimeters by year across model scenarios that include annual fishery-independent National Coral Reef Monitoring Survey (NCRMP) data without recruitment deviations (v01_m3, v08_m3, and v28_m3) and with recruitment deviations (v19_m3 and v31_m3). 
+:::
+
+::: {#fig-meanlen-ncrmp layout-ncol="2"}
+![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/plots/comp_lenfit_data_weighting_TA1-8_Commercial.png)
+
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/plots/comp_lenfit_data_weighting_TA1-8_Commercial.png)
+
+Puerto Rico Yellowtail Snapper observed (open circles) and predicted (blue line) mean length in centimeters by year across model scenarios that include annual fishery-dependent commercial data without recruitment deviations (v28_m3) and with recruitment deviations (v31_m3).
+:::
+
+::: {#fig-lenfit layout-ncol="3"}
+![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/plots/comp_lenfit__aggregated_across_time.png)
+
+![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/plots/comp_lenfit__aggregated_across_time.png)
+
+![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/plots/comp_lenfit__aggregated_across_time.png)
+
+![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/plots/comp_lenfit__aggregated_across_time.png)
+
+![v28_m3 ](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/plots/comp_lenfit__aggregated_across_time.png)
+
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/plots/comp_lenfit__aggregated_across_time.png)
+
+Puerto Rico Yellowtail Snapper observed and predicted length distributions in centimeters aggregated across years for the Commercial and National Coral Reef Monitoring Survey (NCRMP) length composition sacross model scenarios (a_m3, v01_m3, v08_m3, v19_m3, v28_m3,  v31_m3). Green lines represent predicted length compositions, while gray regions represent observed length compositions. The effective sample sizes used to weight the length composition data are provided by N adj (the input sample size) and N eff (the calculated effective sample size) and are shown in the upper right corners. Model scenarios a_m3, v01_m3, v08_m3, and v28_m3 do not estimate recruitment deviations, while model scenarios v19_m3 and v31_m3 do. Super years are utilized for the commercial fleet in scenarios a_m3, v01_m3, v08_m3, and v19_m3 and for the national coral reef monitoring survey in scenario a_m3.
+:::
+
+::: {#fig-lenfit-ncrmp layout-ncol="3"}
+![v01_m3 NCRMP by year](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/plots/comp_lenfit_flt2mkt0.png){#fig-lenfit-v08-2}
+
+![v08_m3 NCRMP by year](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/plots/comp_lenfit_flt2mkt0.png){#fig-lenfit-v08-2}
+
+![v19_m3 NCRMP by year](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/plots/comp_lenfit_flt2mkt0.png){#fig-lenfit-v08-2}
+
+![v28_m3 NCRMP by year](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/plots/comp_lenfit_flt2mkt0.png){#fig-lenfit-v08-2}
+
+![v31_m3 NCRMP by year](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/plots/comp_lenfit_flt2mkt0.png){#fig-lenfit-v08-2}
+
+Puerto Rico Yellowtail Snapper observed and predicted length distributions in centimeters by year for the National Coral Reef Monitoring Survey (NCRMP) length compositions for across model scenarios. Green lines represent predicted length compositions, while gray regions represent observed length compositions. The effective sample sizes used to weight the length composition data are provided by N adj (the input sample size) and N eff (the calculated effective sample size) and are shown in the upper right corners.
+:::
+
+::: {#fig-lenfit-v28 layout-ncol="3"}
+![](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/plots/comp_lenfit_flt1mkt0_page1.png)
+
+![](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/plots/comp_lenfit_flt1mkt0_page2.png)
+
+![](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/plots/comp_lenfit_flt1mkt0_page3.png)
+
+![](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/plots/comp_lenfit_flt1mkt0_page4.png)
+
+![](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/plots/comp_lenfit_flt1mkt0_page5.png)
+
+Puerto Rico Yellowtail Snapper observed and predicted length distributions in centimeters by year for the commercial fleet length compositions for the v28_m3 model scenarios. Green lines represent predicted length compositions, while gray regions represent observed length compositions. The effective sample sizes used to weight the length composition data are provided by N adj (the input sample size) and N eff (the calculated effective sample size) and are shown in the upper right corners.
+:::
+
+::: {#fig-lenfit-v31 layout-ncol="3"}
+![](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/plots/comp_lenfit_flt1mkt0_page1.png){#fig-lenfit-v31-1}
+
+![](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/plots/comp_lenfit_flt1mkt0_page2.png){#fig-lenfit-v31-2}
+
+![](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/plots/comp_lenfit_flt1mkt0_page3.png){#fig-lenfit-v31-3}
+
+![](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/plots/comp_lenfit_flt1mkt0_page4.png){#fig-lenfit-v31-4}
+
+![](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/plots/comp_lenfit_flt1mkt0_page5.png){#fig-lenfit-v31-5}
+
+Puerto Rico Yellowtail Snapper observed and predicted length distributions in centimeters by year for the commercial fleet length compositions for the v31_m3 model scenarios. Green lines represent predicted length compositions, while gray regions represent observed length compositions. The effective sample sizes used to weight the length composition data are provided by N adj (the input sample size) and N eff (the calculated effective sample size) and are shown in the upper right corners.
+:::
+
+::: {#fig-retro layout-ncol="2"}
+![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/retro/plots/retro_SSB.png){width="65%"}
+
+![v1_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/retro/plots/retro_SSB.png){width="65%"}
+
+![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/retro/plots/retro_SSB.png){width="65%"}
+
+![v09_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/retro/plots/retro_SSB.png){width="65%"}
+
+![v208_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/retro/plots/retro_SSB.png){width="65%"}
+
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/retro/plots/retro_SSB.png){width="65%"}
+
+Puerto Rico Yellowtail Snapper retrospective analysis of spawning stock biomass (SSB) conducted by refitting models after removing five years of observation, one year at a time sequentially. Mohn's rho statistics and the corresponding "hindcast rho" measure the severity of retrospective patterns. The reference models (Ref) include the full time series ending in 2022.One-year-ahead projections are denoted by color-coded dashed lines with terminal points. Grey shaded areas are the 95% confidence intervals.
+:::
+
+::: {#fig-profile-r0 layout-ncol="2"}
+![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
+
+![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
+
+![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
+
+![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
+
+![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
+
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
+
+The profile likelihood for the natural log of the unfished recruitment parameter of the Beverton – Holt stock-recruit function for Puerto Rico Yellowtail Snapper across model scenarios (a_m3, v01_m3, v08_m3, v19_m3, v28_m3,  v31_m3). Each line represents the change in negative log-likelihood value for each of the data sources fit in the model across the range of fixed unfished recruitment values tested in the profile diagnostic run. 
+:::
+
+::: {#fig-profile-r0-msyspr layout-ncol="2"}
+![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/profile_r0/plots/profile_msyspr.png){width="70%"}
+
+![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/profile_r0/plots/profile_msyspr.png){width="70%"}
+
+![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/profile_r0/plots/profile_msyspr.png){width="70%"}
+
+![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/profile_r0/plots/profile_msyspr.png){width="70%"}
+
+![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/profile_r0/plots/profile_msyspr.png){width="70%"}
+
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/profile_r0/plots/profile_msyspr.png){width="70%"}
+
+Estimates of the MSY proxy (based on SPR 40%) across the range of unfished recruitment values explored in the Puerto Rico Yellowtail Snapper likelihood profile. These estimates, expressed in metric tons, are shown for model scenarios a_m3, v01_m3, v08_m3, v19_m3, v28_m3,  v31_m3. 
+:::
+
+::: {#fig-profile-eqcatch layout-ncol="2"}
+![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
+
+![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
+
+![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
+
+![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
+
+![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
+
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
+
+The profile likelihood for the fixed initial equilibrium catch for Puerto Rico Yellowtail Snapper across model scenarios (a_m3, v01_m3, v08_m3, v19_m3, v28_m3,  v31_m3). Each line represents the change in negative log-likelihood value for each of the data sources fit in the model across the range of fixed equilibrium catch values tested in the profile diagnostic run. 
+:::
+
+::: {#fig-profile-eqcatch-msyspr layout-ncol="2"}
+![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/profile_eqcatch/plots/profile_msyspr.png){width="70%"}
+
+![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/profile_eqcatch/plots/profile_msyspr.png){width="70%"}
+
+![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/profile_eqcatch/plots/profile_msyspr.png){width="70%"}
+
+![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/profile_eqcatch/plots/profile_msyspr.png){width="70%"}
+
+![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/profile_eqcatch/plots/profile_msyspr.png){width="70%"}
+
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/profile_eqcatch/plots/profile_msyspr.png){width="70%"}
+
+Estimates of the MSY proxy (based on SPR 40%) across the range of initial equilibrium catch values explored in the Puerto Rico Yellowtail Snapper likelihood profile. These estimates, expressed in metric tons, are shown for model scenarios a_m3, v01_m3, v08_m3, v19_m3, v28_m3,  v31_m3. 
+:::
+
+::: {#fig-profile-k layout-ncol="2"}
+![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
+
+![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
+
+![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
+
+![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
+
+![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
+
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
+
+The profile likelihood for the steepness parameter of the Beverton – Holt stock-recruit function for Puerto Rico Yellowtail Snapper across model scenarios (a_m3, v01_m3, v08_m3, v19_m3, v28_m3,  v31_m3). Each line represents the change in negative log-likelihood value for each of the data sources fit in the model across the range of fixed steepness values tested in the profile diagnostic run. 
+:::
+
+::: {#fig-profile-k-msyspr layout-ncol="2"}
+![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/profile_k/plots/profile_msyspr.png){width="70%"}
+
+![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/profile_k/plots/profile_msyspr.png){width="70%"}
+
+![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/profile_k/plots/profile_msyspr.png){width="70%"}
+
+![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/profile_k/plots/profile_msyspr.png){width="70%"}
+
+![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/profile_k/plots/profile_msyspr.png){width="70%"}
+
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/profile_k/plots/profile_msyspr.png){width="70%"}
+
+Estimates of the MSY proxy (based on SPR 40%) across the range of steepness values explored in the Puerto Rico Yellowtail Snapper likelihood profile. These estimates, expressed in metric tons, are shown for model scenarios a_m3, v01_m3, v08_m3, v19_m3, v28_m3,  v31_m3.   
+:::
+

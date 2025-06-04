@@ -1,0 +1,19 @@
+# Assessment Process Report Summary {.unnumbered}
+
+The SEDAR 84 Puerto Rico Yellowtail Snapper (*Ocyurus chrysurus*) stock assessment process consisted of four webinars between April 2024 and October 2024. The data available for the assessment included:
+
+-   An annual species-specific catch time series from commercial logbooks
+-   Fishery-dependent length compositions from commercial port sampling
+-   Fishery-independent length compositions from a reef fish survey
+-   Fishery-independent indices of abundance from a reef fish survey
+-   Life history information from otolith analysis and gonad histology
+
+The assessment used Stock Synthesis, a statistical catch-at-age model [@methot2020]. Stock Synthesis V3.30.22 models were initially configured with an annual catch time series, while length composition data from each source were aggregated across all available years. Model development proceeded stepwise from the simplest configuration to those of moderate complexity. Those sequential steps included the inclusion of dome-shaped selectivity, indices of abundance, and annual length compositions. Models were run with and without the estimation of recruitment deviations. Finally, sensitivities of assessment outcomes were investigated using alternative inputs for longevity-informed natural mortality, coefficient of variation on growth, and uncertainty on initial equilibrium catch.
+
+Model diagnostics assessed convergence, fit, and consistency using gradients, residuals, likelihood profiles, hindcast cross-validation, and jitter analyses. Those diagnostics revealed that, although data contrast was limited and recruitment estimates were highly uncertain, the available length and catch data—particularly from fishery-independent sources—provided information that the models can use to determine potential catch advice, particularly in a grid or model ensemble approach that accounts for key model assumptions and data-limited caveats.
+
+Sensitivity analyses evaluated the effects of assumptions about natural mortality, growth variability, and initial equilibrium catch conditions. While these scenarios showed that key uncertainties can influence estimated productivity and biological reference points, nearly all models across the suite supported the conclusion that overfishing is not occurring and the stock is not overfished. A few sensitivity runs did indicate potential concern under specific combinations of assumptions, particularly with lower initial equilibrium catch and higher natural mortality.
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```

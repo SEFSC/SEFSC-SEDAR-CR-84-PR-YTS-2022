@@ -9,7 +9,7 @@ book:
   repo-url: "https://github.com/SEFSC/SEFSC-SEDAR-CR-84-STTJ-YTS-2022"
   repo-actions: [edit, source, issue]
   favicon: assets/favicon.ico
-  downloads: [pdf, docx]
+  downloads: [pdf]
   search: true
   author:
     - name: Southeast Fisheries Science Center
@@ -20,8 +20,8 @@ book:
     - content/introduction.qmd
     - content/data.qmd
     - content/methods.qmd
-    # - content/diagnostics.qmd
-    # - content/discussion.qmd
+    - content/diagnostics.qmd
+    - content/discussion.qmd
     - content/research.qmd
     - content/tables.qmd
     - content/figures.qmd
@@ -69,7 +69,7 @@ format:
           \fancypagestyle{plain}{
             \fancyhf{}% Clear header/footer
             \renewcommand{\headrulewidth}{0pt}
-            \fancyhead[LE, LO]{July 2025}
+            \fancyhead[LE, LO]{June 2025}
             \fancyhead[RE, RO]{US Caribbean Yellowtail Snapper – Puerto Rico}
             \fancyfoot[LE, LO]{SEDAR 84 SAR Section III}
             \fancyfoot[RE, RO]{Assessment Process Report}

@@ -126,7 +126,7 @@ Puerto Rico Yellowtail Snapper observed (open circles) and predicted (blue line)
 
 :::
 
-::: {#fig-meanlen-ncrmp layout-ncol="2"}
+::: {#fig-meanlen-com layout-ncol="2"}
 
 ![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/plots/comp_lenfit_data_weighting_TA1-8_Commercial.png)
 
@@ -220,127 +220,145 @@ Puerto Rico Yellowtail Snapper observed and predicted length distributions in ce
 
 :::
 
-::: {#fig-retro layout-ncol="2"}
+::: {#fig-retro layout-ncol="3"}
 
-![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/retro/plots/retro_SSB.png){width="65%"}
+![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/retro/plots/retro_SSB.png)
 
-![v1_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/retro/plots/retro_SSB.png){width="65%"}
+![v1_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/retro/plots/retro_SSB.png)
 
-![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/retro/plots/retro_SSB.png){width="65%"}
+![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/retro/plots/retro_SSB.png)
 
-![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/retro/plots/retro_SSB.png){width="65%"}
+![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/retro/plots/retro_SSB.png)
 
-![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/retro/plots/retro_SSB.png){width="65%"}
+![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/retro/plots/retro_SSB.png)
 
-![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/retro/plots/retro_SSB.png){width="65%"}
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/retro/plots/retro_SSB.png)
 
-Puerto Rico Yellowtail Snapper retrospective analysis of spawning stock biomass (SSB) conducted by refitting models after removing five years of observation, one year at a time sequentially. Mohn's rho statistics and the corresponding "hindcast rho" measure the severity of retrospective patterns. The reference models (Ref) include the full time series ending in 2022.One-year-ahead projections are denoted by color-coded dashed lines with terminal points. Grey shaded areas are the 95% confidence intervals.
+Puerto Rico Yellowtail Snapper retrospective analysis of fecundity conducted by refitting models after removing five years of observation, one year at a time sequentially. Mohn's rho statistics and the corresponding "hindcast rho" measure the severity of retrospective patterns. The reference models (Ref) include the full time series ending in 2022.One-year-ahead projections are denoted by color-coded dashed lines with terminal points. Grey shaded areas are the 95% confidence intervals.
 
 :::
 
-::: {#fig-profile-r0 layout-ncol="2"}
+::: {#fig-retro-f layout-ncol="3"}
 
-![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
+![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/retro/plots/retro_F.png)
 
-![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
+![v1_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/retro/plots/retro_F.png)
 
-![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
+![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/retro/plots/retro_F.png)
 
-![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
+![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/retro/plots/retro_F.png)
 
-![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
+![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/retro/plots/retro_F.png)
 
-![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/profile_r0/profile_plot_likelihood.png){width="70%"}
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/retro/plots/retro_F.png)
+
+Puerto Rico Yellowtail Snapper retrospective analysis of fishing mortality conducted by refitting models after removing five years of observation, one year at a time sequentially. Mohn's rho statistics and the corresponding "hindcast rho" measure the severity of retrospective patterns. The reference models (Ref) include the full time series ending in 2022.One-year-ahead projections are denoted by color-coded dashed lines with terminal points. Grey shaded areas are the 95% confidence intervals.
+
+:::
+
+::: {#fig-profile-r0 layout-ncol="3"}
+
+![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/profile_r0/profile_plot_likelihood.png)
+
+![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/profile_r0/profile_plot_likelihood.png)
+
+![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/profile_r0/profile_plot_likelihood.png)
+
+![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/profile_r0/profile_plot_likelihood.png)
+
+![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/profile_r0/profile_plot_likelihood.png)
+
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/profile_r0/profile_plot_likelihood.png)
 
 The profile likelihood for the natural log of the unfished recruitment parameter of the Beverton – Holt stock-recruit function for Puerto Rico Yellowtail Snapper across model scenarios (a_m3, v01_m3, v08_m3, v19_m3, v28_m3, v31_m3). Each line represents the change in negative log-likelihood value for each of the data sources fit in the model across the range of fixed unfished recruitment values tested in the profile diagnostic run. 
 
 :::
 
-::: {#fig-profile-r0-msyspr layout-ncol="2"}
+::: {#fig-profile-r0-msyspr layout-ncol="3"}
 
-![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/profile_r0/plots/profile_msyspr.png){width="70%"}
+![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/profile_r0/plots/profile_msyspr.png)
 
-![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/profile_r0/plots/profile_msyspr.png){width="70%"}
+![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/profile_r0/plots/profile_msyspr.png)
 
-![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/profile_r0/plots/profile_msyspr.png){width="70%"}
+![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/profile_r0/plots/profile_msyspr.png)
 
-![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/profile_r0/plots/profile_msyspr.png){width="70%"}
+![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/profile_r0/plots/profile_msyspr.png)
 
-![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/profile_r0/plots/profile_msyspr.png){width="70%"}
+![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/profile_r0/plots/profile_msyspr.png)
 
-![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/profile_r0/plots/profile_msyspr.png){width="70%"}
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/profile_r0/plots/profile_msyspr.png)
 
 Estimates of the MSY proxy (based on SPR 40%) across the range of unfished recruitment values explored in the Puerto Rico Yellowtail Snapper likelihood profile. These estimates, expressed in metric tons, are shown for model scenarios a_m3, v01_m3, v08_m3, v19_m3, v28_m3, v31_m3. 
 
 :::
 
-::: {#fig-profile-eqcatch layout-ncol="2"}
+::: {#fig-profile-eqcatch layout-ncol="3"}
 
-![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
+![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png)
 
-![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
+![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png)
 
-![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
+![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png)
 
-![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
+![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/profile_eqcatch/profile_plot_likelihood.png)
 
-![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
+![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/profile_eqcatch/profile_plot_likelihood.png)
 
-![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/profile_eqcatch/profile_plot_likelihood.png){width="70%"}
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/profile_eqcatch/profile_plot_likelihood.png)
 
 The profile likelihood for the fixed initial equilibrium catch for Puerto Rico Yellowtail Snapper across model scenarios (a_m3, v01_m3, v08_m3, v19_m3, v28_m3, v31_m3). Each line represents the change in negative log-likelihood value for each of the data sources fit in the model across the range of fixed equilibrium catch values tested in the profile diagnostic run. 
 
 :::
 
-::: {#fig-profile-eqcatch-msyspr layout-ncol="2"}
+::: {#fig-profile-eqcatch-msyspr layout-ncol="3"}
 
-![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/profile_eqcatch/plots/profile_msyspr.png){width="70%"}
+![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/profile_eqcatch/plots/profile_msyspr.png)
 
-![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/profile_eqcatch/plots/profile_msyspr.png){width="70%"}
+![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/profile_eqcatch/plots/profile_msyspr.png)
 
-![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/profile_eqcatch/plots/profile_msyspr.png){width="70%"}
+![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/profile_eqcatch/plots/profile_msyspr.png)
 
-![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/profile_eqcatch/plots/profile_msyspr.png){width="70%"}
+![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/profile_eqcatch/plots/profile_msyspr.png)
 
-![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/profile_eqcatch/plots/profile_msyspr.png){width="70%"}
+![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/profile_eqcatch/plots/profile_msyspr.png)
 
-![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/profile_eqcatch/plots/profile_msyspr.png){width="70%"}
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/profile_eqcatch/plots/profile_msyspr.png)
 
 Estimates of the MSY proxy (based on SPR 40%) across the range of initial equilibrium catch values explored in the Puerto Rico Yellowtail Snapper likelihood profile. These estimates, expressed in metric tons, are shown for model scenarios a_m3, v01_m3, v08_m3, v19_m3, v28_m3, v31_m3. 
 
 :::
 
-::: {#fig-profile-k layout-ncol="2"}
+::: {#fig-profile-k layout-ncol="3"}
 
-![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
+![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/profile_k/profile_plot_likelihood.png)
 
-![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
+![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/profile_k/profile_plot_likelihood.png)
 
-![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
+![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/profile_k/profile_plot_likelihood.png)
 
-![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
+![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/profile_k/profile_plot_likelihood.png)
 
-![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
+![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/profile_k/profile_plot_likelihood.png)
 
-![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/profile_k/profile_plot_likelihood.png){width="70%"}
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/profile_k/profile_plot_likelihood.png)
 
 The profile likelihood for the steepness parameter of the Beverton – Holt stock-recruit function for Puerto Rico Yellowtail Snapper across model scenarios (a_m3, v01_m3, v08_m3, v19_m3, v28_m3, v31_m3). Each line represents the change in negative log-likelihood value for each of the data sources fit in the model across the range of fixed steepness values tested in the profile diagnostic run. 
 
 :::
 
-::: {#fig-profile-k-msyspr layout-ncol="2"}
+::: {#fig-profile-k-msyspr layout-ncol="3"}
 
-![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/profile_k/plots/profile_msyspr.png){width="70%"}
+![a_m3](/Scenarios/84_pr_f3_3cm_0648_0056_a_m3/diagnostics/profile_k/plots/profile_msyspr.png)
 
-![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/profile_k/plots/profile_msyspr.png){width="70%"}
+![v01_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v01_m3/diagnostics/profile_k/plots/profile_msyspr.png)
 
-![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/profile_k/plots/profile_msyspr.png){width="70%"}
+![v08_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v08a_m3/diagnostics/profile_k/plots/profile_msyspr.png)
 
-![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/profile_k/plots/profile_msyspr.png){width="70%"}
+![v19_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v19a_m3/diagnostics/profile_k/plots/profile_msyspr.png)
 
-![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/profile_k/plots/profile_msyspr.png){width="70%"}
+![v28_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v28a_m3_f2_0310/diagnostics/profile_k/plots/profile_msyspr.png)
 
-![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/profile_k/plots/profile_msyspr.png){width="70%"}
+![v31_m3](/Scenarios/84_pr_f3_3cm_0648_0056_v31a_m3_f2_0310/diagnostics/profile_k/plots/profile_msyspr.png)
 
 Estimates of the MSY proxy (based on SPR 40%) across the range of steepness values explored in the Puerto Rico Yellowtail Snapper likelihood profile. These estimates, expressed in metric tons, are shown for model scenarios a_m3, v01_m3, v08_m3, v19_m3, v28_m3, v31_m3.  
 

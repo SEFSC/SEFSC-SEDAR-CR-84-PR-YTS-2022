@@ -4,6 +4,8 @@
 
 To mitigate some of the data uncertainties it is recommended to:
 
+-   The differences in the NCRMP selectivity across models could benefit from additional exploration with informative priors within the Stock Synthesis framework. 
+
 -   Expand fishery-independent survey time series and resolution (e.g., retain and use 1-cm length bin data where available).
 
 -   Further evaluate natural mortality and growth assumptions. Collect and analyze additional life history data to evaluate the accuracy around growth and natural mortality rates.

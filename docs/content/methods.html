@@ -49,7 +49,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../content/research.html" rel="next">
+<link href="../content/diagnostics.html" rel="next">
 <link href="../content/data.html" rel="prev">
 <link href="../assets/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -126,23 +126,7 @@ div.csl-indent {
         <div class="sidebar-tools-main tools-wide">
     <a href="https://nmfs-opensci.github.io" title="NMFS Open Science" class="quarto-navigation-tool px-1" aria-label="NMFS Open Science"><i class="bi bi-globe"></i></a>
     <a href="https://github.com/SEFSC/SEFSC-SEDAR-CR-84-STTJ-YTS-2022" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-    <div class="dropdown">
-      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
-      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-          <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../SEDAR-84.pdf">
-              <i class="bi bi-file-pdf pe-1"></i>
-            Download PDF
-            </a>
-          </li>
-          <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../SEDAR-84.docx">
-              <i class="bi bi-file-word pe-1"></i>
-            Download Docx
-            </a>
-          </li>
-      </ul>
-    </div>
+    <a href="../SEDAR-84.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
 </div>
     </div>
       </div>
@@ -179,20 +163,32 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../content/diagnostics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Model Diagnostics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/discussion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Discussion</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../content/research.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">SEDAR Panel Research Recommendations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">SEDAR Panel Research Recommendations</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/tables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tables</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Tables</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/figures.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Figures</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Figures</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -249,9 +245,9 @@ div.csl-indent {
 <section id="sec-methods-overview" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="sec-methods-overview"><span class="header-section-number">3.2</span> Overview</h2>
 <p>The SEDAR 84 model development process started with simple data-limited configurations, followed by exploring data-moderate configurations, individually and combined. The simplest configurations aggregated length compositions across years by implementing the super-period approach in Stock Synthesis. When using super-periods, the estimation model generates annual values, but the likelihood function will compare the expected composite to the data composite across the super-period. When using this approach on the size composition data, Stock Synthesis models will still aim to identify parameter values for selectivity that achieve a fit between the predicted and observed data.</p>
-<p>The initial setup steps and description of the modeling scenarios documented in this report are listed in <a href="tables.html#tbl-ss3-dev" class="quarto-xref">Table&nbsp;<span>5.3</span></a>. For the SEDAR 84 Yellowtail Snapper assessment, the data-moderate considerations explored included: (a) indices of abundance, (b) annual fishery-independent size compositions, (c) annual fishery-dependent size compositions, (d) dome-shaped selectivity, (e) recruitment deviations, and (f) fishery-dependent selectivity time blocks. Additional model configurations were not pursued.</p>
+<p>The initial setup steps and description of the modeling scenarios documented in this report are listed in <a href="tables.html#tbl-ss3-dev" class="quarto-xref">Table&nbsp;<span>7.3</span></a>. For the SEDAR 84 Yellowtail Snapper assessment, the data-moderate considerations explored included: (a) indices of abundance, (b) annual fishery-independent size compositions, (c) annual fishery-dependent size compositions, (d) dome-shaped selectivity, (e) recruitment deviations, and (f) fishery-dependent selectivity time blocks. Additional model configurations were not pursued.</p>
 <p>The Stock Assessment Continuum Tool was used to develop the initial model setup by importing CSV input files and utilizing its Shiny application interface <span class="citation" data-cites="cope2024">Cope (<a href="references.html#ref-cope2024" role="doc-biblioref">2024</a>)</span>. Starting from the Continuum Tool (ct) model, a series of sequential modifications were applied to represent three key biological and data-related complexities: adjusted size at age zero (m1), continuous recruitment (m2), and increased catch uncertainty (m3).</p>
-<p>This report focuses on the results and sensitivities associated with the m3 models, evaluated under the various data configurations summarized in sec-data-summary. While a full discussion of sensitivity runs is provided later in the report, they are also summarized in <a href="tables.html#tbl-ss3-dev" class="quarto-xref">Table&nbsp;<span>5.3</span></a> to help familiarize the reader with the terminology used throughout. For instance, model <strong>v08_m3_s1</strong> refers to the eighth scenario (<strong>v8</strong>, which includes an index, annual fishery-independent size compositions, and dome-shaped selectivity), the third level modification (<strong>m3</strong>, reflecting continuous recruitment and higher catch uncertainty), and the fist sensitivity scenario (<strong>s1</strong>, higher uncertainty on growth).</p>
+<p>This report focuses on the results and sensitivities associated with the m3 models, evaluated under the various data configurations summarized in sec-data-summary. While a full discussion of sensitivity runs is provided later in the report, they are also summarized in <a href="tables.html#tbl-ss3-dev" class="quarto-xref">Table&nbsp;<span>7.3</span></a> to help familiarize the reader with the terminology used throughout. For instance, model <strong>v08_m3_s1</strong> refers to the eighth scenario (<strong>v8</strong>, which includes an index, annual fishery-independent size compositions, and dome-shaped selectivity), the third level modification (<strong>m3</strong>, reflecting continuous recruitment and higher catch uncertainty), and the fist sensitivity scenario (<strong>s1</strong>, higher uncertainty on growth).</p>
 <p>Due to the lack of an estimable spawner-recruit relationship across the explored models, a commonly used 40% spawning potential ratio (SPR) was used as a proxy for Maximum Sustainable Yield (MSY) and as the basis for management reference points. The SPR proxy reflects the ratio of expected lifetime reproductive potential under fished conditions compared to virgin conditions.</p>
 
 
@@ -687,8 +683,8 @@ Taylor, I. G., Doering, K. L., Johnson, K. F., Wetzel, C. R., &amp; Stewart, I. 
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../content/research.html" class="pagination-link" aria-label="SEDAR Panel Research Recommendations">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">SEDAR Panel Research Recommendations</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../content/diagnostics.html" class="pagination-link" aria-label="Model Diagnostics">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Model Diagnostics</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

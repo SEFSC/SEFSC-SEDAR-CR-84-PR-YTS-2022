@@ -48,13 +48,13 @@ All models closely matched the observed 2012 - 2022 catch data, which was expect
 
 ### Indices
 
-For the models without recruitment deviation being estimated (model scenarios v4_m2, and v8_m2), the predicted NCRMP and DCRMP indices are flat (Figures [-@fig-cpue2] and [-@fig-cpue3]). In the model scenarios with estimated recruitment deviations (v19_m3), there is some a slight overall decline in the estimated indices. Notably, high  uncertainty in the index was observed in 2013 of the NCRMP index (@fig-cpue2).
+For the models without recruitment deviation being estimated (model scenarios v4_m2, and v8_m2), the predicted NCRMP index is flat (Figure [-@fig-cpue2]). In the model scenarios with estimated recruitment deviations (v19_m3), there is some a slight overall decline in the estimated indices. Notably, high  uncertainty in the index was observed in 2013 of the NCRMP index (@fig-cpue2).
 
 ### Length Compositions
 
 @fig-lenfit shows the cumulative fit across all years between the observed and predicted length composition for the  model scenario that had aggregated size data (v4_m3). Figures [-@fig-lenfit-v8] and [-@fig-lenfit-v19] provide the cumulative and the year-specific length compositions for the model scenarios that included annual fishery-independent size data (v8_m3, and v19_m3).
 
-Among the models with the annual fishery-independent size data (v8_m3, and v19_m3), the model with recruitment deviation being estimated (v19_m3), has improved fits to the annual NCRMP and DCRMP length composition data (@fig-lenfit-v19-2). In the scenarios without recruitment deviations (v8_m3), the predicted NCRMP composition is identical across years and similar to cumulative fit when the size data were aggregated in model v4_m3. Finally, @fig-meanlen shows the observed and predicted mean length by year. 
+Among the models with the annual fishery-independent size data (v8_m3, and v19_m3), the model with recruitment deviation being estimated (v19_m3), has improved fits to the annual NCRMP length composition data (@fig-lenfit-v19-2). In the scenarios without recruitment deviations (v8_m3), the predicted NCRMP composition is identical across years and similar to cumulative fit when the size data were aggregated in model v4_m3. Finally, @fig-meanlen shows the observed and predicted mean length by year. 
 
 ## Retrospective Analysis
 
@@ -70,15 +70,15 @@ Typically, profiling is carried out for key parameters, particularly those defin
 
 ### Unfished Recruitment (R0)
 
-@fig-profile-r0 shows the profile likelihood for the natural log of the unfished recruitment parameter of the Beverton – Holt stock-recruit function for St. Thomas and St. John Yellowtail Snapper across model scenarios (v4,_m3, v8_m3 and v19_m3). All models show conflicting signals and relatively poorly defined minimums, with a range of equally plausible values reflected by only small changes in likelihood. @fig-profile-r0-msyspr shows the corresponding change in the Maximum Sustainable Yield Proxy based on SPR 40% across the range of unfished recruitment values explored. 
+@fig-profile-r0 shows the profile likelihood for the natural log of the unfished recruitment parameter of the Beverton – Holt stock-recruit function for Puerto Rico Yellowtail Snapper across model scenarios (v4,_m3, v8_m3 and v19_m3). All models show conflicting signals and relatively poorly defined minimums, with a range of equally plausible values reflected by only small changes in likelihood. @fig-profile-r0-msyspr shows the corresponding change in the Maximum Sustainable Yield Proxy based on SPR 40% across the range of unfished recruitment values explored. 
 
 ### Initial Equilibrium Catch {#sec-daignostics-eqcatch-profile}
 
-@fig-profile-eqcatch shows the profile likelihood for the initial equilibrium catch for St. Thomas and St. John Yellowtail Snapper across model scenarios (v4_m3, v8_m3, and v19_m3). The models suggest improved fit associated with larger values of fixed initial equilibrium catch. @fig-profile-eqcatch-msyspr shows the corresponding change in the MSY SPR 40% across the range of initial equilibrium catch values explored. This suggests that given further flexibility the initial equilibrium may be estimated higher. This was further examined through sensitivity runs further relaxing the information that informs the initial model conditions.
+@fig-profile-eqcatch shows the profile likelihood for the initial equilibrium catch for Puerto Rico Yellowtail Snapper across model scenarios (v4_m3, v8_m3, and v19_m3). The models suggest improved fit associated with larger values of fixed initial equilibrium catch. @fig-profile-eqcatch-msyspr shows the corresponding change in the MSY SPR 40% across the range of initial equilibrium catch values explored. This suggests that given further flexibility the initial equilibrium may be estimated higher. This was further examined through sensitivity runs further relaxing the information that informs the initial model conditions.
 
 ### Steepness
 
-@fig-profile-k shows the profile likelihood for the steepness parameter of the Beverton – Holt stock-recruit function for St. Thomas and St. John Yellowtail Snapper across model scenarios (v4_m3, v7_m3, and v19_m3). The lowest likelihoods are all associated lowest values of steepness, driven by the fit to the length data. @fig-profile-k-msyspr shows the corresponding change in the MSY SPR 40% across the range of steepness values explored. 
+@fig-profile-k shows the profile likelihood for the steepness parameter of the Beverton – Holt stock-recruit function for Puerto Rico Yellowtail Snapper across model scenarios (v4_m3, v7_m3, and v19_m3). The lowest likelihoods are all associated lowest values of steepness, driven by the fit to the length data. @fig-profile-k-msyspr shows the corresponding change in the MSY SPR 40% across the range of steepness values explored. 
 
 ## Sensitivity Runs
 

@@ -1,7 +1,7 @@
 library(foreach)
 
 # Specify pattern ####
-pattern <- "84_pr_f3_3cm_0648_0056_v01_m3"
+pattern <- "84_pr_f3_3cm_0648_0056_v19a_m3"
 
 ## Get folder names ####
 full_names <- list.files(

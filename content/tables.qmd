@@ -69,11 +69,10 @@ title: "Tables"
 | Scenario | null | catch and super-year size data |
 | Scenario | a | index |
 | Scenario | v1 | index + annual fishery-independent size data |
-| Scenario | v8 | index + annual fishery-independent size data + dome-shaped selectivity |
-| Scenario | v19 | index + annual fishery-independent size data + dome-shaped selectivity + recruitment deviations |
-| Scenario | v26 | index + annual size data + dome-shaped selectivity + recruitment deviations |
-| Scenario | v29 | index + annual fishery-independent size data + dome-shaped selectivity + recruitment deviations + time block |
-| Scenario | v31 | index + annual size data + dome-shaped selectivity + recruitment deviations + time block |
+| Scenario | v8 | index + annual fishery-independent size data + dome-shaped fishery-independent selectivity |
+| Scenario | v19 | index + annual fishery-independent size data + dome-shaped fishery-independent selectivity + recruitment deviations |
+| Scenario | v28 | index + annual fishery-independent size data + annual fishery-dependent size data + dome-shaped fishery-independent selectivity + time block |
+| Scenario | v31 | index + annual fishery-independent size data + annual fishery-dependent size data + dome-shaped fishery-independent selectivity + time block + recruitment deviations |
 | Sensitivity | s1 | higher CV on growth young |
 | Sensitivity | s2 | higher age and lower m |
 | Sensitivity | s3 | higher catch uncertainty |
@@ -81,20 +80,27 @@ title: "Tables"
 
 : Summary of process and naming conventions used across different model development stages of the SEDAR 84 Puerto Rico Yellowtail Snapper stock assessment. {#tbl-ss3-dev}
 
+::: {.content-hidden}
+
+| Scenario | v17 | index + annual fishery-independent size data + annual fishery-dependent size data + dome-shaped fishery-independent selectivity |
+| Scenario | v26 | index + annual fishery-independent size data + annual fishery-dependent size data + dome-shaped fishery-independent selectivity + recruitment deviations |
+
+:::
+
 {{< pagebreak >}}
 
 ```{r}
 #| echo: false
 #| warning: false
 #| label: tbl-corr
-#| tbl-cap: "Puerto Rico Yellowtail Snapper correlations between estimated parameters across the m3 model scenarios. The table shows correlations greater than 0.9 or less than -0.9. Correlations that are greater than 0.95 or less than -0.95 are shown in red. NOTE RUN M2 FOR 31, 28, 19 and 8."
+#| tbl-cap: "Puerto Rico Yellowtail Snapper correlations between estimated parameters across the m3 model scenarios. The table shows correlations greater than 0.9 or less than -0.9. Correlations that are greater than 0.95 or less than -0.95 are shown in red."
 
 library(here)
 library(dplyr)
 library(flextable)
 
 pattern <- c(
- "a_m2", "v01_m2", 
+ "a_m2", "v01_m2", "v08a_m2", "v19a_m2", "v28a_m2_f2_0310", "v31a_m2_f2_0310",
  "a_m3", "v01_m3", "v08a_m3", "v19a_m3", "v28a_m3_f2_0310", "v31a_m3_f2_0310"
  )
 cutout <- "_f2_0310"
@@ -104,27 +110,26 @@ short_covar <- read.csv(here::here("Scenarios", "scenarios_covar.csv")) |>
  dplyr::filter(scenario %in% pattern) |>
  dplyr::mutate(scenario = stringr::str_remove(scenario, cutout)) |>
  dplyr::mutate(
-  label.i = dplyr::case_when(
-   label.i == "Size_DblN_ascend_se_Commercial(1)" ~ 
-    "Commercial Sel. Asend.",
-   label.i == "Size_DblN_top_logit_NCRMP(2)" ~ "NCRMP Sel. Top",          
-   label.i == "Size_DblN_ascend_se_Commercial(1)_BLK1repl_1983" ~ 
-    "Commercial Sel. Asend. 1983",
-   label.i == "Size_DblN_ascend_se_Commercial(1)_BLK1repl_2004" ~ 
-    "Commercial Sel. Asend. 2004"
-  ),
+   label.i = dplyr::case_when(
+     label.i == "Size_DblN_ascend_se_Commercial(1)" ~ "Commercial Sel. Asend.",
+     label.i == "Size_DblN_top_logit_NCRMP(2)" ~ "NCRMP Sel. Top",
+     label.i == "Size_DblN_ascend_se_Commercial(1)_BLK1repl_1983" ~ "Commercial Sel. Asend. 1983",
+     label.i == "Size_DblN_ascend_se_Commercial(1)_BLK1repl_2004" ~ "Commercial Sel. Asend. 2004",
+     label.i == "InitF_seas_1_flt_1Commercial" ~ "Initial F"
+    ),
   label.j = dplyr::case_when(
    label.j == "Size_DblN_peak_Commercial(1)" ~ "Commercial Sel. Peak",
    label.j == "Size_DblN_peak_NCRMP(2)" ~ "NCRMP Sel. Peak",
    label.j == "Size_DblN_peak_Commercial(1)_BLK1repl_1983" ~ "Commercial Sel. Peak 1983",
-   label.j == "Size_DblN_peak_Commercial(1)_BLK1repl_2004" ~ "Commercial Sel. Peak 2004"
+   label.j == "Size_DblN_peak_Commercial(1)_BLK1repl_2004" ~ "Commercial Sel. Peak 2004",
+   label.j == "SR_LN(R0)" ~ "Unfished Recruitment (R0)"
   )
  )
 
 var_corr <- c(
  "Scenario",
- "Estimated Parameters", 
- "Estimated Parameters", 
+ "Estimated Parameters",
+ "Estimated Parameters",
  "Correlation\nCoefficient")
 
 tbl_corr <- short_covar |>
@@ -183,9 +188,9 @@ tbl_dq
 
 ```{r}
 #| label: tbl-eqcatch
-#| tbl-cap: "Puerto Rico Yellowtail Snapper estimated initial equilibrium catch in metric tons by model scenario including across sensitivity runs. The input value was 168 metric tons with a standard error of 0.3."
+#| tbl-cap: "Puerto Rico Yellowtail Snapper estimated initial equilibrium catch in metric tons by model scenario including across sensitivity runs. The input value was 168.3 metric tons with a standard error of 0.3."
 
-pattern <- "^a_m3|v01_m3|v08a_m3|v19a_m3|v28a_m3_f2_0310|v31a_m3_f2_0310"
+pattern <- "^a_m3|v01_m3|v08a_m3|v19a_m3|v28a_m3_f2_0310|v31a_m3_f2_0310|^a_m2|v01_m2|v08a_m2|v19a_m2|v28a_m2_f2_0310|v31a_m2_f2_0310"
 cutout <- "_f2_0310"
  
 est_eqcatch_short <- read.csv(here::here("Scenarios", "eq_catch.csv")) |>

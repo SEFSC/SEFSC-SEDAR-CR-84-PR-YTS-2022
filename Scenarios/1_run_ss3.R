@@ -13,6 +13,8 @@ pattern <- "v19a_m3_s2"
 pattern <- "v19a_m3$"
 pattern <- "_m2_f2|19a_m3$|19a_m2$|08a_m2$"
 pattern <- "19a_m3$"
+pattern <- "19_test"
+
 
 plots <- c(1:26)
 minbthresh <- -1

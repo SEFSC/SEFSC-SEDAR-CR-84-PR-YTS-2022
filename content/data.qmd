@@ -2,35 +2,35 @@
 title: "Data-Informed Modeling Decisions"
 ---
 
-The data available for use in the current assessment are documented in the SEDAR 84 U.S. Caribbean Yellowtail Snapper St. Thomas and St. John Data Workshop Report [@sedar2024]. Provided here is a summary of those data with a focus on the associated model configurations explored using Stock Synthesis. Throughout this report, **bolded text** is used to highlight and summarize the model settings and configurations relevant to the various phases of model development.
+The data available for use in the current assessment are documented in the SEDAR 84 U.S. Caribbean Yellowtail Puerto Rico Data Workshop Report [@sedar2024]. Provided here is a summary of those data with a focus on the associated model configurations explored using Stock Synthesis. Throughout this report, **bold text** is used to highlight and summarize the model settings and configurations relevant to the various phases of model development.
 
 Additional details for each data input are available in their respective references:
 
 1.  **Landings** from self-reported commercial fisher logbooks [@martínezrivera2024]
 2.  **Length compositions** from shore-based port sampling [@godwin2024]
-3.  **Length compositions** from two fishery-independent surveys of reef fish [@grove2024]
-4.  **Indices of abundance** from two fishery-independent surveys of reef fish [@grove2024]
+3.  **Length compositions** from a fishery-independent survey of reef fish [@grove2024]
+4.  **Indices of abundance** from a fishery-independent survey of reef fish [@grove2024]
 5.  **Life history information** from otolith analysis and gonad histology [@riverahernández2024]
 
-**Based on the available data, the assessment was configured with one area, one season, one commercial fleet, and two fishery-independent surveys.**
+**Based on the available data, the assessment was configured with one area, one season, one commercial fleet, and one fishery-independent survey.**
 
 ## Commercial Fleet Data {#sec-data-fleet}
 
 ### Catch {#sec-data-fleet-catch}
 
-The catch data for the commercial fleet came from the Caribbean Commercial Logbook program [@martínezrivera2024]. Beginning in 1996, part of the commercial landings was reported by species groups (e.g., snappers, groupers, parrotfishes, surgeonfishes, etc.), and by gear (hook and line, gill net, SCUBA, trap, etc.). All commercial fishery data reports included species groups beginning in 1998. In July of 2011, commercial landings were reported by species and gear. 
+The catch data for the commercial fleet came from the Caribbean Commercial Logbook program [@martínezrivera2024]. Commercial fishery landings data for Yellowtail Snapper in Puerto Rico were available for the years 1983-2022. 
 
-The handline gear group made up 72% of the reported landings catch of Yellowtail Snapper in St. Thomas and St. John from this group. All gears (handline, trap, rod and reel, and other) were included into a single commercial fleet (@tbl-catch). Potential outliers discussed during the assessment webinars were investigated and retained as valid trips.
+The handline gear group made up 80% of the reported landings catch of Yellowtail Snapper in Puerto Rico from this group. All gears (handline, trap, rod and reel, and other) were included into a single commercial fleet (@tbl-catch). Potential outliers discussed during the assessment webinars were investigated and retained as valid trips.
 
 In the SEDAR 84 Stock Synthesis models, **the catch was input as biomass (in metric tons) and was treated as if it occurred over an entire fishing season; i.e., each fishing year.** 
 
-The years of the available species-specific self-reported commercial fisher logbook landings and effort data determined the start and end years of the Stock Synthesis models. **The start and end years of the model were 2012 and 2022, respectively.** 
+The years of the available species-specific self-reported commercial fisher logbook landings and effort data determined the start and end years of the Stock Synthesis models. **The start and end years of the model were 1983 and 2022, respectively.** 
 
-It is important to note that the stock was not unexploited at the start year of the available catch time series. The fishery had been ongoing for decades and the total fishing effort in St. Thomas and St. John in 2012 was undergoing a meaningful decline. Initial F was estimated for the commercial fleet and a corresponding initial equilibrium catch was input. A common option to define an initial equilibrium catch is to use the geometric mean of the first three years of available catches. However, because of the known decline in effort preceding the start year of the assessment, **the initial equilibrium catch was configured in initial runs as 25 metric tons**, a little under twice the geometric mean of the catches from 2012 - 2014, which was 26.4 metric tons).
+It is important to note that the stock was not unexploited at the start year of the available catch time series. Therefore, initial F was estimated for the commercial fleet and a corresponding initial equilibrium catch was input. A common method was use to define an initial equilibrium catch. It was equal to the geometric mean of the first three years of available catches (168.3 metric tons).
 
 **The input standard error for the landings was set to  0.3.** When implemented with few data inputs, Stock synthesis will inherently fit the annual landings time series nearly exactly, regardless of the input standard error. Initial models were set up with a default standard error of 0.01. In addition to nearly exactly fitting the annual landings time series, the models also nearly exactly fit the input initial equilibrium catch. A higher standard error value of 0.3 was used to free up the estimation of the initial equilibrium catch. The sequential model configurations and model development are described later in this report.
 
-Commercial discards reported by calendar year by @martínezrivera2024 were not significant and based on the nature of spearfishing, the predominant dive gear. **The assessment assumed no discards**.
+Commercial discards are not reported in Puerto Rico fisher logbook data. **The assessment assumed no discards**.
 
 Alternative model configurations associated with the commercial fleet data are described later in this report. They included:
 
@@ -39,13 +39,11 @@ Alternative model configurations associated with the commercial fleet data are d
 
 ### Size Composition {#sec-data-fleet-size}
 
-Gear-specific annual length frequencies for the commercial fleet came from the commercial shore-based port-sampling Trip Interview Program [@godwin2024]. The NOAA Fisheries, Southeast Fisheries Science Center Trip Interview Program collects length and weight data from fish landed by commercial fishing vessels, along with information about fishing areas and gears. Data collection began in 1983 with frequent updates in best practices; the latest being in 2017. The Yellowtail Snapper length data from St. Thomas and St. John included 20,064 length observations across 1,078 unique port sampling interviews.
+Gear-specific annual length frequencies for the commercial fleet came from the commercial shore-based port-sampling Trip Interview Program [@godwin2024]. The NOAA Fisheries, Southeast Fisheries Science Center Trip Interview Program collects length and weight data from fish landed by commercial fishing vessels, along with information about fishing areas and gears. Data collection began in 1983 with frequent updates in best practices; the latest being in 2017. The Yellowtail Snapper length data from Puerto Rico included 103,730 length observations across 5,159 unique port sampling interviews.
 
-Although the catch data can be separated into handline and non-handline related gears, 85% of the length measurements for St. Thomas and St. John Yellowtail Snapper from 2012-2022 were associated with handlines. Those data were used to characterize the commercial fleet's size-based selectivity pattern. Since multiple fish length measurements can be obtained from a single sampled trip, each length does not represent an independent observation. **The relative model weighting of the commercial fleet length compositions was based on the number of trips sampled**. 
+Although the catch data can be separated into handline and non-handline related gears, 77% of the length measurements for Puerto Rico Yellowtail Snapper from 1983-2022 were associated with handlines. Those data were used to characterize the commercial fleet's size-based selectivity pattern. Since multiple fish length measurements can be obtained from a single sampled trip, each length does not represent an independent observation. **The relative model weighting of the commercial fleet length compositions was based on the number of trips sampled**. 
 
-From 2012 - 2022, the size data included 7,351 shore-based length measurements obtained across 208 trips. Two trips were flagged and removed as potential outliers with unusually large lengths. **Due to low sample sizes of both fish and trips, the fishery-dependent commercial fleet length composition data were collapsed across all years 2012-2022** by implementing the super-period approach in Stock Synthesis.
-
-**The Trip Interview Program length compositions of the commercial fleet were assumed to be representative of the total catch.** Although a federal minimum size limit exists, it does not apply in USVI territorial waters extending from land to 3 nautical miles offshore. Discussion at the data workshop emphasized that the federal regulations does affect retention, however there are insufficient data on the sizes of discarded fish to inform size-based retention.
+From 1983 - 2022, the size data included 83,341 shore-based length measurements obtained across 2,829 trips. **The Trip Interview Program length compositions of the commercial fleet were assumed to be representative of the total catch.** 
 
 **A double normal function was used to model the relative vulnerability of capture by length for the commercial fleet.** However, only two parameters were estimated, effectively describing a logistic selectivity for the commercial fleet. The double normal function allows for domed or logistic selectivity. It combines two normal distributions; the first describes the ascending limb, while the second describes the descending limb. Achieving the logistic shape with the double normal Stock Synthesis pattern facilitated model configurations for SEDAR 84. The two parameters used to achieve a logistic selectivity shape were the size associated with peak selectivity and the width of the ascending limb. Domed selectivity was explored for the fishery independent survey data described in the following section. 
 
@@ -53,21 +51,17 @@ From 2012 - 2022, the size data included 7,351 shore-based length measurements o
 
 ### Index of Abundance {#sec-data-survey-index}
 
-The National Coral Reef Monitoring Program (NCRMP) supports reef fish sampling on hard-bottom habitats from 0 to 30 meters depth [@grove2021]. In St. Thomas and St. John, NCRMP sampling began in 2001 and was conducted every year from 2001 to 2011 and then every other year starting in 2013. The data used in SEDAR 84 were from 2013 - 2022 when the survey was conducted island-wide. Data collected prior to 2017 were calibrated to account for a transition from belt transect to a cylinder survey method.
+The National Coral Reef Monitoring Program (NCRMP) supports reef fish sampling on hard-bottom habitats from 0 to 30 meters depth [@grove2021]. In Puerto Rico, NCRMP sampling began in 2001 and was conducted every year from 2001 to 2012 and then 2014, 2016, 2019, and 2021. The data used in SEDAR 84 were from 2014 - 2022 when the survey was conducted island-wide. Data collected prior to 2017 were calibrated to account for a transition from belt transect to a cylinder survey method.
 
-From 2020-2022, the Coral Reef Conservation Program (CRCP) funded a pilot survey to target the upper mesophotic habitats of St. Thomas and St. John. The Deep-NCRMP (DCRMP) has a sampling depth limit of 60 m [@grove2024].
-
-Annual mean density and associated standard errors for NCMP and DCRMP for SEDAR 84 were provided by @grove2024.  In Stock Synthesis, the time series of mean density across all observed sizes **were input as an index in numbers with a lognormal error distribution**. The associated length composition data, described in the following subsection, suggested that **the index reflected the abundance of juveniles but did not observe the larger adults concurrently observed in the commercial catch data**.
+Annual mean density and associated standard errors for NCRMP for SEDAR 84 were provided by @grove2024.  In Stock Synthesis, the time series of mean density across all observed sizes **were input as an index in numbers with a lognormal error distribution**. The associated length composition data, described in the following subsection, suggested that **the index reflected the abundance of juveniles but did not observe the larger adults concurrently observed in the commercial catch data**.
 
 ### Size Composition {#sec-data-survey-size}
 
-The NCRMP and DCRMP surveys in St. Thomas and St. John provided counts by individual lengths measured to the nearest centimeter. **The length data inputs for both the commercial fleet and the surveys were used 3-centimeter bins.**
-
-A large proportion of small fish were observed in the NCRMP survey. **The smallest two bins, (2 - 5 centimeters) and (5 - 8 centimeters), were collapsed into a single bin (2 - 8 centimeters).**
+The NCRMP survey in Puerto Rico provided counts by individual lengths measured to the nearest centimeter. **The length data inputs for both the commercial fleet and the surveys were used 3-centimeter bins.**
 
 Since multiple fish can be observed during a single dive, individual lengths are not independent observations. **The relative model weighting of the NCRMP survey and DCRMP survey length compositions across years was based on the number of paired dives.**
 
-The length compositions provided reasonable support that younger fish were available to the NCRMP survey. Over half of the lengths from the NCRMP survey were smaller than 20 centimeters fork length, and 99% were below 32 centimeters fork length. Meanwhile, the compositions also provided support that larger fish were available to the DCRMP. Over half of the lengths from the DCRMP survey were smaller than 26 centimeters fork length, and 98% were below 41 centimeters fork length. **Dome-shaped selectivity was explored for both the NCRMP and DCRMP surveys.**
+The length compositions provided reasonable support that younger fish were available to the NCRMP survey. Over half of the lengths from the NCRMP survey were smaller than 20 centimeters fork length, and 99% were below 33 centimeters fork length. **Dome-shaped selectivity was explored for the NCRMP survey.**
 
 Models were initially configured in Stock Synthesis with length compositions aggregated across the available years for each source of length data and proceeded stepwise from the simplest configuration to those of moderate complexity. The steps included the inclusion of annual fishery-independent length compositions. The sequential model configurations are described later in this report.
 
@@ -138,7 +132,7 @@ Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, w
 
 -   The catch was input as biomass (in metric tons) and was treated as if it occurred over an entire fishing season; i.e., each fishing year.
 
--   The start and end years of the model were 2012 and 2022, respectively.
+-   The start and end years of the model were 1983 and 2022, respectively.
 
 -   The assessment assumed no discards.
 
@@ -146,13 +140,11 @@ Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, w
 
     -   A higher standard error of 2 was explored via sensitivity analysis.
 
--   The initial equilibrium catch was configured in initial runs as 25 metric tons.
+-   The initial equilibrium catch was configured in initial runs as 168.3 metric tons.
 
     -   The initial equilibrium catch was explored via likelihood profiling.
 
 -   The relative model weighting of the commercial fleet length compositions was based on the number of trips sampled.
-
--   Due to low sample sizes, the fishery-dependent commercial fleet length composition data were combined across all years.
 
 -   The length compositions of the commercial fleet were assumed to be representative of the total catch.
 
@@ -162,9 +154,7 @@ Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, w
 
 -   The NCRMP index reflected the abundance of juveniles.
 
--   The DCRMP index reflected larger fish than the NCRMP index.
-
--   The surveys were configured as an index in numbers with a lognormal error distribution
+-   The survey wAS configured as an index in numbers with a lognormal error distribution.
 
 -   The relative model weighting of the surveys length compositions across years were based on the number of paired dives.
 
@@ -172,13 +162,11 @@ Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, w
 
 -   The model's simulated population bin size was 1-centimeter bins.
 
--   The smallest two bins, (2 - 5 centimeters) and (5 - 8 centimeters), were collapsed into a single bin (2 - 8 centimeters). 
-
--   The surveys were set up in the models with dome-shaped selectivity. 
+-   The model development process explored dome-shaped selectivity for the fishery independent survey. 
 
 ### Life History {#sec-data-summary-biology}
 
--   The Yellowtail Snapper population was modeled from age 0 through age 206, and from 0 to 56-centimeters fork length, in 1-centimeter bins, with the largest values for each as plus groups.
+-   The Yellowtail Snapper population was modeled from age 0 through age 26, and from 0 to 56-centimeters fork length, in 1-centimeter bins, with the largest values for each as plus groups.
 
 -   Parameter estimates for Von Bertalanffy growth parameter (K) and the length at maximum age (L∞) were based on samples of Yellowtail Snapper collected across the U.S. Caribbean from 2013 to 2023.
 

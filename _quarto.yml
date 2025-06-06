@@ -18,7 +18,7 @@ book:
   chapters:
     - index.qmd
     - content/introduction.qmd
-    # - content/data.qmd
+    - content/data.qmd
     - content/methods.qmd
     # - content/diagnostics.qmd
     # - content/discussion.qmd

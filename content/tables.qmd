@@ -2,6 +2,10 @@
 title: "Tables"
 ---
 
+::: {.content-hidden}
+# 1
+:::
+
 | Year | Metric Tons | Pounds | Handline | Other | Rod & Reel | Traps |
 |:-----:|:-----:|:----------:|:---:|:---:|:---:|:---:|
 | 1983 | 124.6 | 274,642 | 54% | 5% | 9% | 32% |
@@ -50,6 +54,10 @@ title: "Tables"
 
 {{< pagebreak >}}
 
+::: {.content-hidden}
+# 2
+:::
+
 | Input Source | Input Type | Input | M | Method |
 |:-------------|:----------|:-------:|:--:|:--------|
 | @sedar2020 | Maximum age | 28 | **0.180** | Hamel_Amax |
@@ -88,6 +96,10 @@ title: "Tables"
 :::
 
 {{< pagebreak >}}
+
+::: {.content-hidden}
+# 3
+:::
 
 ```{r}
 #| label: tbl-parm
@@ -136,6 +148,10 @@ tbl_parm
 ```
 
 {{< pagebreak >}}
+
+::: {.content-hidden}
+# 4
+:::
 
 ```{r}
 #| echo: false
@@ -198,6 +214,10 @@ tbl_corr
 
 {{< pagebreak >}}
 
+::: {.content-hidden}
+# 5
+:::
+
 ```{r}
 #| label: tbl-eqcatch
 #| tbl-cap: "Puerto Rico Yellowtail Snapper estimated initial equilibrium catch in metric tons by model scenario including across sensitivity runs. The input value was 168.3 metric tons with a standard error of 0.3."
@@ -231,6 +251,10 @@ tbl_eqcatch
 ```
 
 {{< pagebreak >}}
+
+::: {.content-hidden}
+# 6
+:::
 
 ```{r}
 #| label: tbl-dq
@@ -270,6 +294,10 @@ tbl_dq
 
 {{< pagebreak >}}
 
+::: {.content-hidden}
+# 7
+:::
+
 ```{r}
 #| label: tbl-est-msy
 #| tbl-cap: "Puerto Rico Yellowtail Snapper derived quantities of the MSY proxy (based on SPR 40%) in metric tons by model scenario (a_m3, v01_m3, v08_m3, v19_m3, v28_m3, v31_m3) and corresponding each model scenario's four sensitivity runs. CV is calculated as the SD divided by the parameter estimate. Estimates of the MSY proxy are also presented in pounds in @tbl-msy."
@@ -298,6 +326,10 @@ tbl_est_msy
 ```
 
 {{< pagebreak >}}
+
+::: {.content-hidden}
+# 8
+:::
 
 ```{r}
 #| label: tbl-msy
@@ -331,6 +363,10 @@ tbl_msy
 ```
 
 {{< pagebreak >}}
+
+::: {.content-hidden}
+# 9
+:::
 
 ```{r}
 #| label: tbl-msra

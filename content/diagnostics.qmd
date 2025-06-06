@@ -82,7 +82,7 @@ Typically, profiling is carried out for key parameters, particularly those defin
 
 ### Steepness
 
-@fig-profile-k shows the profile likelihood for the steepness parameter of the Beverton – Holt stock-recruit function for Puerto Rico Yellowtail Snapper across models. The lowest likelihoods are not associated with the highest values of steepness. Instead they are assoicated with intermediatly steepness values between 0.7 and 0.9. @fig-profile-k-msyspr shows the corresponding change in the MSY SPR 40% across the range of steepness values explored. 
+@fig-profile-k shows the profile likelihood for the steepness parameter of the Beverton – Holt stock-recruit function for Puerto Rico Yellowtail Snapper across models. The lowest likelihoods are not associated with the highest values of steepness. Instead they are associated with intermediately steepness values between 0.7 and 0.9. @fig-profile-k-msyspr shows the corresponding change in the MSY SPR 40% across the range of steepness values explored. 
 
 ## Sensitivity Runs
 

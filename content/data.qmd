@@ -154,7 +154,7 @@ Inputs for the Natural Mortality Tool were sourced from @riverahernández2024, w
 
 -   The NCRMP index reflected the abundance of juveniles.
 
--   The survey wAS configured as an index in numbers with a lognormal error distribution.
+-   The survey was configured as an index in numbers with a lognormal error distribution.
 
 -   The relative model weighting of the surveys length compositions across years were based on the number of paired dives.
 

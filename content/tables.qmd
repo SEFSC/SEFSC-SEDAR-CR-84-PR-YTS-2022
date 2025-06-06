@@ -108,7 +108,8 @@ cutout <- "_f2_0310"
 
 short_covar <- read.csv(here::here("Scenarios", "scenarios_covar.csv")) |>
  dplyr::filter(scenario %in% pattern) |>
- dplyr::mutate(scenario = stringr::str_remove(scenario, cutout)) |>
+ dplyr::mutate(scenario = stringr::str_remove(scenario, cutout),
+               scenario = stringr::str_remove(scenario, "(?<=\\d)a")) |>
  dplyr::mutate(
    label.i = dplyr::case_when(
      label.i == "Size_DblN_ascend_se_Commercial(1)" ~ "Commercial Sel. Asend.",
@@ -167,7 +168,8 @@ est_dq <- read.csv(here::here("Scenarios", "scenarios_dq.csv")) |>
  dplyr::select(Parameter, Scenario, Estimate, SD, CV) |>
  dplyr::arrange(desc(Parameter), Scenario) |>
  dplyr::filter(stringr::str_detect(Scenario, pattern)) |>
- dplyr::mutate(Scenario = stringr::str_remove(Scenario, cutout))
+ dplyr::mutate(Scenario = stringr::str_remove(Scenario, cutout),
+               Scenario = stringr::str_remove(Scenario, "(?<=\\d)a"))
 
 
 tbl_dq <- est_dq |>
@@ -198,7 +200,8 @@ est_eqcatch_short <- read.csv(here::here("Scenarios", "eq_catch.csv")) |>
  #dplyr::filter(!stringr::str_detect(Scenario, "ct|m1" )) |>
  dplyr::filter(stringr::str_detect(Scenario, pattern )) |>
  dplyr::mutate(Scenario = stringr::str_remove(Scenario, cutout),
-        Estimate = round(Estimate, 1)) |>
+               Scenario = stringr::str_remove(Scenario, "(?<=\\d)a"),
+               Estimate = round(Estimate, 1)) |>
  tidyr::separate(Scenario, c('run', 'Scenario'), sep = "_", extra = "merge") |>
  tidyr::pivot_wider(
   names_from = c(run),
@@ -228,7 +231,8 @@ cutout <- "_f2_0310"
 
 est_parm_short <- read.csv(here::here("Scenarios", "scenarios_parm.csv")) |>
  dplyr::filter(stringr::str_detect(Scenario, pattern )) |>
- dplyr::mutate(Scenario = stringr::str_remove(Scenario, cutout)) |>
+ dplyr::mutate(Scenario = stringr::str_remove(Scenario, cutout),
+               Scenario = stringr::str_remove(Scenario, "(?<=\\d)a")) |>
  dplyr::mutate(
   Parameter = dplyr::case_when(
    Parameter == "SR_LN(R0)" ~ "Unfished Recruitment (R0)",
@@ -275,7 +279,8 @@ cutout <- "_f2_0310"
 
 est_msy <- read.csv(here::here("Scenarios", "est_msy.csv")) |>
  dplyr::filter(stringr::str_detect(Scenario, pattern )) |>
- dplyr::mutate(Scenario = stringr::str_remove(Scenario, cutout)) |>
+ dplyr::mutate(Scenario = stringr::str_remove(Scenario, cutout),
+               Scenario = stringr::str_remove(Scenario, "(?<=\\d)a")) |>
  #dplyr::filter(!stringr::str_detect(Scenario, "ct|m1" )) |>
  dplyr::rename("MSY Proxy" = Estimate)
 
@@ -302,22 +307,24 @@ pattern <- "^a_m3|v01_m3|v08a_m3|v19a_m3|v28a_m3_f2_0310|v31a_m3_f2_0310"
 cutout <- "_f2_0310"
 
 scenarios_summary <- read.csv(here::here("Scenarios", "scenarios_summary.csv")) |>
- dplyr::select(scenario, Dead_Catch_SPR_lbs) |>
- dplyr::filter(stringr::str_detect(scenario, pattern )) |>
- dplyr::mutate(scenario = stringr::str_remove(scenario, cutout)) |>
- #dplyr::filter(!stringr::str_detect(scenario, "ct|m1" )) |>
- tidyr::separate(scenario, c('run', 'Scenario'), sep = "_", extra = "merge") |>
- tidyr::pivot_wider(
-  names_from = c(run),
-  values_from = c(Dead_Catch_SPR_lbs))
+  dplyr::select(scenario, Dead_Catch_SPR_lbs) |>
+  dplyr::filter(stringr::str_detect(scenario, pattern )) |>
+  dplyr::mutate(scenario = stringr::str_remove(scenario, cutout),
+                scenario = stringr::str_remove(scenario, "(?<=\\d)a")) |>
+  #dplyr::filter(!stringr::str_detect(scenario, "ct|m1" )) |>
+  tidyr::separate(scenario, c('run', 'Scenario'), sep = "_", extra = "merge") |>
+  tidyr::pivot_wider(
+    names_from = c(run),
+    values_from = c(Dead_Catch_SPR_lbs)
+  )
 
 tbl_msy <- scenarios_summary |>
- flextable::flextable() |>
- flextable::autofit() |>
- flextable::theme_box() |>
- flextable::align(align = "center", part = "all") |>
- flextable::fontsize(size = 11, part = "all") |>
- flextable::font(fontname = "Times New Roman", part = "all")
+  flextable::flextable() |>
+  flextable::autofit() |>
+  flextable::theme_box() |>
+  flextable::align(align = "center", part = "all") |>
+  flextable::fontsize(size = 11, part = "all") |>
+  flextable::font(fontname = "Times New Roman", part = "all")
 
 tbl_msy
 
@@ -336,7 +343,8 @@ spr_f_summary <- read.csv(here::here("Scenarios", "scenarios_summary.csv")) |>
  dplyr::select(scenario, Fcurrent_FSPR) |>
  dplyr::mutate(Fcurrent_FSPR = round(Fcurrent_FSPR, 2)) |>
  dplyr::filter(stringr::str_detect(scenario, pattern )) |>
- dplyr::mutate(scenario = stringr::str_remove(scenario, cutout)) |>
+ dplyr::mutate(scenario = stringr::str_remove(scenario, cutout)) |>  
+  dplyr::mutate(scenario = stringr::str_remove(scenario, "(?<=\\d)a")) |>
  #dplyr::filter(!stringr::str_detect(scenario, "ct|m1" )) |>
  tidyr::separate(scenario, c('run', 'Scenario'), sep = "_", extra = "merge") |>
  tidyr::pivot_wider(
@@ -348,7 +356,8 @@ spr_ssb_summary <- read.csv(here::here("Scenarios", "scenarios_summary.csv")) |>
  dplyr::select(scenario, SSB2022_SSBSPR) |>
  dplyr::mutate(SSB2022_SSBSPR = round(SSB2022_SSBSPR, 2)) |>
  dplyr::filter(stringr::str_detect(scenario, pattern )) |>
- dplyr::mutate(scenario = stringr::str_remove(scenario, cutout)) |>
+ dplyr::mutate(scenario = stringr::str_remove(scenario, cutout),
+               scenario = stringr::str_remove(scenario, "(?<=\\d)a")) |>
  #dplyr::filter(!stringr::str_detect(scenario, "ct|m1" )) |>
  tidyr::separate(scenario, c('run', 'Scenario'), sep = "_", extra = "merge") |>
  tidyr::pivot_wider(
@@ -369,18 +378,18 @@ tbl_msra <- msra_summary |>
  flextable::fontsize(size = 11, part = "all") |>
  flextable::color(color = "red", i = ~ a > 1 & Metric == "F Current /\nF SPR 40%", j = "a") |>
  flextable::color(color = "red", i = ~ v01 > 1 & Metric == "F Current /\nF SPR 40%", j = "v01") |>
- flextable::color(color = "red", i = ~ v08a > 1 & Metric == "F Current /\nF SPR 40%", j = "v08a") |>
- flextable::color(color = "red", i = ~ v19a > 1 & Metric == "F Current /\nF SPR 40%", j = "v19a") |>
- flextable::color(color = "red", i = ~ v28a > 1 & Metric == "F Current /\nF SPR 40%", j = "v28a") |>
- flextable::color(color = "red", i = ~ v31a > 1 & Metric == "F Current /\nF SPR 40%", j = "v31a") |>
+ flextable::color(color = "red", i = ~ v08 > 1 & Metric == "F Current /\nF SPR 40%", j = "v08") |>
+ flextable::color(color = "red", i = ~ v19 > 1 & Metric == "F Current /\nF SPR 40%", j = "v19") |>
+ flextable::color(color = "red", i = ~ v28 > 1 & Metric == "F Current /\nF SPR 40%", j = "v28") |>
+ flextable::color(color = "red", i = ~ v31 > 1 & Metric == "F Current /\nF SPR 40%", j = "v31") |>
  flextable::align(align = "center", part = "all") |>
  flextable::fontsize(size = 11, part = "all") |>
  flextable::color(color = "red", i = ~ a < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "a") |>
  flextable::color(color = "red", i = ~ v01 < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "v01") |>
- flextable::color(color = "red", i = ~ v08a < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "v08a") |>
- flextable::color(color = "red", i = ~ v19a < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "v19a") |>
- flextable::color(color = "red", i = ~ v28a < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "v28a") |>
- flextable::color(color = "red", i = ~ v31a < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "v31a") |>
+ flextable::color(color = "red", i = ~ v08 < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "v08") |>
+ flextable::color(color = "red", i = ~ v19 < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "v19") |>
+ flextable::color(color = "red", i = ~ v28 < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "v28") |>
+ flextable::color(color = "red", i = ~ v31 < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "v31") |>
  flextable::font(fontname = "Times New Roman", part = "all")
 
 tbl_msra

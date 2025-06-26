@@ -4,7 +4,7 @@ project:
 
 book: 
   page-navigation: true
-  title: "SEDAR 84" 
+  title: "S84_AWReport_YTS_PR" 
   site-url: "https://sturdy-adventure-166n52z.pages.github.io/" 
   repo-url: "https://github.com/SEFSC/SEFSC-SEDAR-CR-84-STTJ-YTS-2022"
   repo-actions: [edit, source, issue]

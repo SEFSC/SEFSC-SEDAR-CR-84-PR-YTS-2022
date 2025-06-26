@@ -25,61 +25,57 @@ The SEDAR 84 Assessment Process was held via webinars from April to November 202
 
 ##	List of Participants
 
-***Assessment Panel***
+| ***Assessment Panel*** |  |
+| :- | -: |
+| Adyan Rios (Lead Analyst) | NMFS/SEFSC |
+| Richard Appeldoorn |  SSC |
+| J.J. Cruz-Motta | CFMC SSC, UPRM |
+| Matt Damiano | NMFS/SEFSC |
+| Sennai Habtes | USVI DPNR |
+| Walter Keithly | SSC/LSU |
+| Kevin McCarthy | NMFS/SEFSC |
+| M. Refik Orhun | NMFS/SEFSC |
+| Kyle Shertzer | NMFS/SEFSC |
+| Virginia Shervette | Univ SC |
+| Derek Soto | MER |
+: {tbl-colwidths="[50,50]"}
 
-|  |  |  |
-| -------------------------- | ------------------------------------ | -------------------- |
-| Adyan Rios (Lead Analyst)  |                                 | NMFS/SEFSC |
-| Richard Appeldoorn         | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | SSC |
-| J.J. Cruz-Motta            | | CFMC SSC, UPRM |
-| Matt Damiano               | | NMFS/SEFSC |
-| Sennai Habtes              | | USVI DPNR |
-| Walter Keithly             | | SSC/LSU |
-| Kevin McCarthy             | | NMFS/SEFSC |
-| M. Refik Orhun             | | NMFS/SEFSC |
-| Kyle Shertzer              | | 	NMFS/SEFSC |
-| Virginia Shervette         | | Univ SC |
-| Derek Soto                 | | MER |
+| ***Appointed Observers*** |  |
+| :- | -: |
+| Carlos Farchette | Stakeholder - STX |
+| Julian Magras | DAP STT/STJ |
+: {tbl-colwidths="[50,50]"}
 
-***Appointed Observers***
+| ***Observers*** |  |
+| :- | -: |
+| Jerald S. Ault | Univ of Miami |
+| Rachel Banton | NMFS/SEFSC |
+| Sarah Beggerly | NMFS/SEFSC |
+| David Behringer | NMFS/SEFSC |
+| Jeremiah Blondeau | NMFS/SEFSC |
+| Chip Collier | SAFMC Staff |
+| Carly Daiek | NMFS/SEFSC |
+| Katherine Godwin | UM-CIMAS |
+| Jennifer Granneman | NOAA |
+| Jay Grove | NMFS/SEFSC |
+| Walter Ingram | NMFS/SEFSC |
+| Stephanie Martinez-Rivera | NMFS/SEFSC |
+| Maria McGirl | FWC |
+| Jennifer Pytka | |
+| Maggie Rios | USVI DPNR |
+| Jesus M. Rivera-Herdández | Univ SC |
+| Grisel Rodriguez-Ferrer | PR DNER |
+| Wilson Santiago Soler | PR Fisheries Liaison |
+| Sarah Stephenson | NMFS/SEFSC |
+| Joyah Watkins | Rice University |
+: {tbl-colwidths="[50,50]"}
 
-|  |  |  |
-| -------------------------- | ------------------------------------ | -------------------- |
-| Carlos Farchette           | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Stakeholder - STX |
-| Julian Magras              |                                                        | DAP STT/STJ       |
-
-***Observers***
-
-|  |  |  |
-| -------------------------- | ------------------------------------ | -------------------- |
-| Jerald S. Ault             | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Univ of Miami        |
-| Rachel Banton              |                                            | NMFS/SEFSC           |
-| Sarah Beggerly             |                                            | NMFS/SEFSC           |
-| David Behringer            |                                            | NMFS/SEFSC           |
-| Jeremiah Blondeau          |                                            | NMFS/SEFSC           |
-| Chip Collier               |                                            | SAFMC Staff          |
-| Carly Daiek                |                                            | NMFS/SEFSC           |
-| Katherine Godwin           |                                            | UM-CIMAS             |
-| Jennifer Granneman         |                                            | NOAA                 |
-| Jay Grove                  |                                            | NMFS/SEFSC           |
-| Walter Ingram              |                                            | NMFS/SEFSC           |
-| Stephanie Martinez-Rivera  |                                            | NMFS/SEFSC           |
-| Maria McGirl	             |                                            | FWC                  |
-| Jennifer Pytka             |                                            |                      |
-| Maggie Rios                |                                            | USVI DPNR            |
-| Jesus M. Rivera-Herdández	 |                                            | Univ SC              |
-| Grisel Rodriguez-Ferrer    |                                            | PR DNER              |
-| Wilson Santiago Soler      |                                            | PR Fisheries Liaison |
-| Sarah Stephenson           |                                            | NMFS/SEFSC           |
-| Joyah Watkins              |                                            | Rice University      |
-
-***Staff***
-
-|  |  |  |
-| -------------------------- | ------------------------------------ | -------------------- |
-| Julie A. Neer	             | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | SEDAR                |
-| Liajay Rivera Garciá       |                                      | CFMC Staff           |
-| Graciela Garcia-Moliner	   |                                      | CFMC Staff           |
+| ***Staff*** |  |
+| :- | -: |
+| Julie A. Neer | SEDAR |
+| Liajay Rivera Garciá | CFMC Staff |
+| Graciela Garcia-Moliner | CFMC Staff |
+: {tbl-colwidths="[50,50]"}
 
 ##	List of Assessment Process Working Papers and Reference Documents
 

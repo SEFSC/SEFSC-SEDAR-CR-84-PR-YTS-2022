@@ -1,6 +1,6 @@
 # Specify pattern of runs (ex: "84_stx", "m2$")
-pattern <- "_a_m3$|01_m3$|08a_m3$|19a_m3$|28a_m3_f2_0310$|31a_m3_f2_0310$"
-folder_name <- "m3"
+pattern <- "19a_m3$|31a_m3_f2_0310$|19_m3$|31_m3_f2_0310$"
+folder_name <- "m3_test"
 
 # Specify cutout string to match short names in scenarios.csv
 cutout <- "84_pr_f3_3cm_0648_0056_"
@@ -101,7 +101,9 @@ plot_sizeselex <- function(
     ) |>
     dplyr::mutate(
       size = as.numeric(size),
-      selex = as.numeric(selex)
+      selex = as.numeric(selex),
+      Fleet = dplyr::recode(Fleet, "1" = "Commercial",
+                            "2" = "NCRMP")
     ) |>
     ggplot2::ggplot(ggplot2::aes(
       x = size,
@@ -111,7 +113,12 @@ plot_sizeselex <- function(
     )) +
     ggplot2::geom_line() +
     ggplot2::facet_wrap(~ Fleet) +
-    ggplot2::theme_minimal() 
+    ggplot2::theme_minimal() +
+    ggplot2::labs(x = "Length (cm)",
+                  y = "Selectivity",
+                  lty = "Block",
+                  color = "Model Scenario")
+                  
 
   ggplot2::ggsave(
     here::here(output_dir, paste0("sizeselex", sizesel_file, ".png")),

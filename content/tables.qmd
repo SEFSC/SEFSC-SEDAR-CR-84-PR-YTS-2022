@@ -60,38 +60,37 @@ title: "Tables"
 
 | Input Source | Input Type | Input | M | Method |
 |:-------------|:----------|:-------:|:--:|:--------|
-| @sedar2020 | Maximum age | 28 | **0.180** | Hamel_Amax |
-| @riverahernández2024 | Maximum age | 20 | **0.270** | Hamel_Amax |
+| @sedar2020 | Maximum age | 28 | **0.193** | Hamel_Amax |
+| @riverahernández2024 | Maximum age | 26 | **0.208** | Hamel_Amax |
 | Meta-analysis | Scientific name | *Ocyurus chrysurus* | 0.348 | FishLife |
 
-: Empirical estimates of natural mortality (M) derived using life history information and the Natural Mortality Tool [@cope2022]. All models included in this report utilize the natural mortality estimate of 0.208 corresponding with the maximum age observed by @riverahernández2024, except two of the sensitivity scenarios (s2 and s4) which utilize the 0.193 natural morality corresponding with the estimated maximum age from @sedar2020. {#tbl-m}
+: Empirical estimates of natural mortality (M) derived using life history information and the Natural Mortality Tool [@cope2022]. All models included in this report utilize the natural mortality estimate of 0.208 corresponding with the maximum age observed by @riverahernández2024, except two of the sensitivity scenarios (s2 and s4) which utilize the 0.193 natural morality corresponding with the estimated maximum age from @sedar2020. Higher estimate of mortality result from the meta-analysis available in the FishLife R package [@thorson2017]. {#tbl-m}
 
 {{< pagebreak >}}
 
 | Stage | Code | Sequential modeling steps |
 |--------|:----:|----------------------------------------------------------------|
 | Initial | ct | model initialized with continuum tool (ct) |
-| Initial | m1 | ct + adjusted size at age zero |
+| Initial | m1 | ct + adjusted length at age zero |
 | Initial | m2 | m1 + continuous recruitment |
 | Initial | m3 | m2 + catch uncertainty |
-| Scenario | null | catch and super-year size data |
+| Scenario | null | catch and super-year length data |
 | Scenario | a | index |
-| Scenario | v1 | index + annual fishery-independent size data |
-| Scenario | v8 | index + annual fishery-independent size data + dome-shaped fishery-independent selectivity |
-| Scenario | v19 | index + annual fishery-independent size data + dome-shaped fishery-independent selectivity + recruitment deviations |
-| Scenario | v28 | index + annual fishery-independent size data + annual fishery-dependent size data + dome-shaped fishery-independent selectivity + time block |
-| Scenario | v31 | index + annual fishery-independent size data + annual fishery-dependent size data + dome-shaped fishery-independent selectivity + time block + recruitment deviations |
+| Scenario | v01 | index + annual fishery-independent length data |
+| Scenario | v08 | index + annual fishery-independent length data + dome-shaped fishery-independent selectivity |
+| Scenario | v19 | index + annual fishery-independent length data + dome-shaped fishery-independent selectivity + recruitment deviations |
+| Scenario | v31 | index + annual fishery-independent length data + annual fishery-dependent length data + dome-shaped fishery-independent selectivity + time block + recruitment deviations |
 | Sensitivity | s1 | higher CV on growth young |
 | Sensitivity | s2 | higher age and lower m |
 | Sensitivity | s3 | higher catch uncertainty |
 | Sensitivity | s4 | s2 + s3 |
 
-: Summary of process and naming conventions used across different model development stages of the SEDAR 84 Puerto Rico Yellowtail Snapper stock assessment. {#tbl-ss3-dev}
+: Summary of process and naming conventions used across different model development stages of the SEDAR 84 Puerto Rico Yellowtail Snapper stock assessment. The numbering of model runs reflects a structured approach used to track configurations consistently across all three SEDAR 84 assessments.  {#tbl-ss3-dev}
 
 ::: {.content-hidden}
 
-| Scenario | v17 | index + annual fishery-independent size data + annual fishery-dependent size data + dome-shaped fishery-independent selectivity |
-| Scenario | v26 | index + annual fishery-independent size data + annual fishery-dependent size data + dome-shaped fishery-independent selectivity + recruitment deviations |
+| Scenario | v17 | index + annual fishery-independent length data + annual fishery-dependent length data + dome-shaped fishery-independent selectivity |
+| Scenario | v26 | index + annual fishery-independent length data + annual fishery-dependent length data + dome-shaped fishery-independent selectivity + recruitment deviations |
 
 :::
 
@@ -103,9 +102,9 @@ title: "Tables"
 
 ```{r}
 #| label: tbl-parm
-#| tbl-cap: "Puerto Rico Yellowtail Snapper parameters, standard deviations (SD), and coefficient of variation (CV) by model scenario (a_m3, v01_m3, v08_m3, v19_m3, v28_m3, v31_m3). CV is calculated as the SD divided by the parameter estimate."
+#| tbl-cap: "Puerto Rico Yellowtail Snapper parameters, standard deviations (SD), and coefficient of variation (CV) by model scenario (a_m3, v01_m3, v08_m3, v19_m3, v31_m3). CV is calculated as the SD divided by the parameter estimate."
 
-pattern <- "^a_m3|v01_m3|v08a_m3|v19a_m3|v28a_m3_f2_0310|v31a_m3_f2_0310"
+pattern <- "^a_m3|v01_m3|v08a_m3|v19a_m3|v31a_m3_f2_0310"
 cutout <- "_f2_0310"
 
 est_parm_short <- read.csv(here::here("Scenarios", "scenarios_parm.csv")) |>
@@ -116,16 +115,16 @@ est_parm_short <- read.csv(here::here("Scenarios", "scenarios_parm.csv")) |>
   Parameter = dplyr::case_when(
    Parameter == "SR_LN(R0)" ~ "Unfished Recruitment (R0)",
    Parameter == "InitF_seas_1_flt_1Commercial" ~ "Initial F",
-   Parameter == "Size_DblN_ascend_se_Commercial(1)" ~ "Commercial Sel. Asend.",
-   Parameter == "Size_DblN_peak_Commercial(1)" ~ "Commercial Sel. Peak",
-   Parameter == "Size_DblN_ascend_se_Commercial(1)_BLK1repl_1983" ~ "Commercial Sel. Asend.\n1983 - 2003",
-   Parameter == "Size_DblN_peak_Commercial(1)_BLK1repl_1983" ~ "Commercial Sel. Peak\n1983 - 2003",
-   Parameter == "Size_DblN_ascend_se_Commercial(1)_BLK1repl_2004" ~ "Commercial Sel. Asend.\n2004 - 2010",
-   Parameter == "Size_DblN_peak_Commercial(1)_BLK1repl_2004" ~ "Commercial Sel. Peak\n2004 - 2010",
-   Parameter == "Size_DblN_peak_NCRMP(2)" ~ "NCRMP Sel. Peak",     
-   Parameter == "Size_DblN_top_logit_NCRMP(2)" ~ "NCRMP Sel. Top",    
-   Parameter == "Size_DblN_end_logit_NCRMP(2)" ~ "NCRMP Sel. End",     
-   Parameter == "Size_DblN_ascend_se_NCRMP(2)" ~ "NCRMP Sel. Asend."
+   Parameter == "Size_DblN_ascend_se_Commercial(1)" ~ "Commercial\nAscending Selectivity",
+   Parameter == "Size_DblN_peak_Commercial(1)" ~ "Commercial\nSelectivity Peak",
+   Parameter == "Size_DblN_ascend_se_Commercial(1)_BLK1repl_1983" ~ "Commercial\nAscending Selectivity\n1983 - 2003",
+   Parameter == "Size_DblN_peak_Commercial(1)_BLK1repl_1983" ~ "Commercial\nSelectivity Peak\n1983 - 2003",
+   Parameter == "Size_DblN_ascend_se_Commercial(1)_BLK1repl_2004" ~ "Commercial\nAscending Selectivity\n2004 - 2010",
+   Parameter == "Size_DblN_peak_Commercial(1)_BLK1repl_2004" ~ "Commercial\nSelectivity Peak\n2004 - 2010",
+   Parameter == "Size_DblN_peak_NCRMP(2)" ~ "NCRMP\nSelectivity Peak",     
+   Parameter == "Size_DblN_top_logit_NCRMP(2)" ~ "NCRMP\nSelectivity Top",    
+   Parameter == "Size_DblN_end_logit_NCRMP(2)" ~ "NCRMP\nSelectivity End",     
+   Parameter == "Size_DblN_ascend_se_NCRMP(2)" ~ "NCRMP\nAscending Selectivity"
   )
  ) |>
  dplyr::select(Parameter, Scenario, Estimate, SD, CV, Gradient) |>
@@ -164,8 +163,8 @@ library(dplyr)
 library(flextable)
 
 pattern <- c(
- "a_m2", "v01_m2", "v08a_m2", "v19a_m2", "v28a_m2_f2_0310", "v31a_m2_f2_0310",
- "a_m3", "v01_m3", "v08a_m3", "v19a_m3", "v28a_m3_f2_0310", "v31a_m3_f2_0310"
+ "a_m2", "v01_m2", "v08a_m2", "v19a_m2", "v31a_m2_f2_0310",
+ "a_m3", "v01_m3", "v08a_m3", "v19a_m3", "v31a_m3_f2_0310"
  )
 cutout <- "_f2_0310"
 
@@ -176,17 +175,17 @@ short_covar <- read.csv(here::here("Scenarios", "scenarios_covar.csv")) |>
                scenario = stringr::str_remove(scenario, "(?<=\\d)a")) |>
  dplyr::mutate(
    label.i = dplyr::case_when(
-     label.i == "Size_DblN_ascend_se_Commercial(1)" ~ "Commercial Sel. Asend.",
-     label.i == "Size_DblN_top_logit_NCRMP(2)" ~ "NCRMP Sel. Top",
-     label.i == "Size_DblN_ascend_se_Commercial(1)_BLK1repl_1983" ~ "Commercial Sel. Asend. 1983",
-     label.i == "Size_DblN_ascend_se_Commercial(1)_BLK1repl_2004" ~ "Commercial Sel. Asend. 2004",
+     label.i == "Size_DblN_ascend_se_Commercial(1)" ~ "Commercial\nAscending Selectivity",
+     label.i == "Size_DblN_top_logit_NCRMP(2)" ~ "NCRMP Selectivity Top",
+     label.i == "Size_DblN_ascend_se_Commercial(1)_BLK1repl_1983" ~ "Commercial\nAscending Selectivity 1983",
+     label.i == "Size_DblN_ascend_se_Commercial(1)_BLK1repl_2004" ~ "Commercial\nAscending Selectivity 2004",
      label.i == "InitF_seas_1_flt_1Commercial" ~ "Initial F"
     ),
   label.j = dplyr::case_when(
-   label.j == "Size_DblN_peak_Commercial(1)" ~ "Commercial Sel. Peak",
-   label.j == "Size_DblN_peak_NCRMP(2)" ~ "NCRMP Sel. Peak",
-   label.j == "Size_DblN_peak_Commercial(1)_BLK1repl_1983" ~ "Commercial Sel. Peak 1983",
-   label.j == "Size_DblN_peak_Commercial(1)_BLK1repl_2004" ~ "Commercial Sel. Peak 2004",
+   label.j == "Size_DblN_peak_Commercial(1)" ~ "Commercial\nSelectivity Peak",
+   label.j == "Size_DblN_peak_NCRMP(2)" ~ "NCRMP Selectivity Peak",
+   label.j == "Size_DblN_peak_Commercial(1)_BLK1repl_1983" ~ "Commercial\nSelectivity Peak 1983",
+   label.j == "Size_DblN_peak_Commercial(1)_BLK1repl_2004" ~ "Commercial\nSelectivity Peak 2004",
    label.j == "SR_LN(R0)" ~ "Unfished Recruitment (R0)"
   )
  )
@@ -222,7 +221,7 @@ tbl_corr
 #| label: tbl-eqcatch
 #| tbl-cap: "Puerto Rico Yellowtail Snapper estimated initial equilibrium catch in metric tons by model scenario including across sensitivity runs. The input value was 168.3 metric tons with a standard error of 0.3."
 
-pattern <- "^a_m3|v01_m3|v08a_m3|v19a_m3|v28a_m3_f2_0310|v31a_m3_f2_0310|^a_m2|v01_m2|v08a_m2|v19a_m2|v28a_m2_f2_0310|v31a_m2_f2_0310"
+pattern <- "^a_m3|v01_m3|v08a_m3|v19a_m3|v31a_m3_f2_0310|^a_m2|v01_m2|v08a_m2|v19a_m2|v31a_m2_f2_0310"
 cutout <- "_f2_0310"
  
 est_eqcatch_short <- read.csv(here::here("Scenarios", "eq_catch.csv")) |>
@@ -258,9 +257,9 @@ tbl_eqcatch
 
 ```{r}
 #| label: tbl-dq
-#| tbl-cap: "Puerto Rico Yellowtail Snapper derived quantities for unfished and initial spawning stock biomass in metric tons (mt) along with standard deviations (SD) and coefficient of variation (CV) by model scenario (a_m3, v01_m3, v08_m3, v19_m3, v28_m3, v31_m3). CV is calculated as the SD divided by the parameter estimate."
+#| tbl-cap: "Puerto Rico Yellowtail Snapper derived quantities for unfished and initial spawning stock biomass in metric tons (mt) along with standard deviations (SD) and coefficient of variation (CV) by model scenario (a_m3, v01_m3, v08_m3, v19_m3, v31_m3). CV is calculated as the SD divided by the parameter estimate."
 
-pattern <- "^a_m3$|v01_m3$|v08a_m3$|v19a_m3$|v28a_m3_f2_0310$|v31a_m3_f2_0310$"
+pattern <- "^a_m3$|v01_m3$|v08a_m3$|v19a_m3$|v31a_m3_f2_0310$"
 cutout <- "_f2_0310"
 
 est_dq <- read.csv(here::here("Scenarios", "scenarios_dq.csv")) |>
@@ -300,9 +299,9 @@ tbl_dq
 
 ```{r}
 #| label: tbl-est-msy
-#| tbl-cap: "Puerto Rico Yellowtail Snapper derived quantities of the MSY proxy (based on SPR 40%) in metric tons by model scenario (a_m3, v01_m3, v08_m3, v19_m3, v28_m3, v31_m3) and corresponding each model scenario's four sensitivity runs. CV is calculated as the SD divided by the parameter estimate. Estimates of the MSY proxy are also presented in pounds in @tbl-msy."
+#| tbl-cap: "Puerto Rico Yellowtail Snapper derived quantities of the MSY proxy (based on SPR 40%) in metric tons by model scenario (a_m3, v01_m3, v08_m3, v19_m3, v31_m3) and corresponding each model scenario's four sensitivity runs. CV is calculated as the SD divided by the parameter estimate. Estimates of the MSY proxy are also presented in pounds in @tbl-msy."
 
-pattern <- "^a_m3|v01_m3|v08a_m3|v19a_m3|v28a_m3_f2_0310|v31a_m3_f2_0310"
+pattern <- "^a_m3|v01_m3|v08a_m3|v19a_m3|v31a_m3_f2_0310"
 cutout <- "_f2_0310"
 
 est_msy <- read.csv(here::here("Scenarios", "est_msy.csv")) |>
@@ -318,7 +317,7 @@ tbl_est_msy <- est_msy |>
  flextable::autofit() |>
  flextable::theme_box() |>
  flextable::align(align = "center", part = "all") |>
- flextable::fontsize(size = 11, part = "all") |>
+ flextable::fontsize(size = 10, part = "all") |>
  flextable::font(fontname = "Times New Roman", part = "all")
 
 tbl_est_msy
@@ -333,9 +332,9 @@ tbl_est_msy
 
 ```{r}
 #| label: tbl-msy
-#| tbl-cap: "Puerto Rico Yellowtail Snapper derived quantities of the MSY proxy (based on SPR 40%) in pounds by model scenario (a_m3, v01_m3, v08_m3, v19_m3, v28_m3, v31_m3) and corresponding each model scenario's four sensitivity runs."
+#| tbl-cap: "Puerto Rico Yellowtail Snapper derived quantities of the MSY proxy (based on SPR 40%) in pounds by model scenario (a_m3, v01_m3, v08_m3, v19_m3, v31_m3) and corresponding each model scenario's four sensitivity runs."
 
-pattern <- "^a_m3|v01_m3|v08a_m3|v19a_m3|v28a_m3_f2_0310|v31a_m3_f2_0310"
+pattern <- "^a_m3|v01_m3|v08a_m3|v19a_m3|v31a_m3_f2_0310"
 cutout <- "_f2_0310"
 
 scenarios_summary <- read.csv(here::here("Scenarios", "scenarios_summary.csv")) |>
@@ -370,9 +369,9 @@ tbl_msy
 
 ```{r}
 #| label: tbl-msra
-#| tbl-cap: "Puerto Rico Yellowtail Snapper fishing mortality rate and spawning stock biomass ratios relative to the rate and biomass of the stock associated with the MSY proxy (based on SPR 40%). The relative fishing mortality ratio is expressed as a three-year geometric mean of the annual fishing mortality rates for 2020-2022 divided by the fishing mortality rate associated with MSY SPR 40%. Relative fishing mortality rates that are above one are shown in red font. The relative stock biomass ratio is expressed as the 2022 spawning biomass divided by the spawning stock biomass at MSY SPR 40%. Relative fishing mortality ratios that are below 0.75 are shown in red font."
+#| tbl-cap: "Puerto Rico Yellowtail Snapper fishing mortality rate and spawning stock biomass ratios relative to the rate and biomass of the stock associated with the MSY proxy (based on SPR 40%). The relative fishing mortality ratio is expressed as a three-year geometric mean of the annual fishing mortality rates for 2020-2022 divided by the fishing mortality rate associated with MSY SPR 40%. Relative fishing mortality rates that are above one are shown in red font. The relative stock biomass ratio is expressed as the 2022 spawning biomass divided by the spawning stock biomass at MSY SPR 40%. Relative stock biomass ratios that are below 0.75 are shown in red font."
 
-pattern <- "^a_m3|v01_m3|v08a_m3|v19a_m3|v28a_m3_f2_0310|v31a_m3_f2_0310"
+pattern <- "^a_m3|v01_m3|v08a_m3|v19a_m3|v31a_m3_f2_0310"
 cutout <- "_f2_0310"
 
 spr_f_summary <- read.csv(here::here("Scenarios", "scenarios_summary.csv")) |>
@@ -416,7 +415,6 @@ tbl_msra <- msra_summary |>
  flextable::color(color = "red", i = ~ v01 > 1 & Metric == "F Current /\nF SPR 40%", j = "v01") |>
  flextable::color(color = "red", i = ~ v08 > 1 & Metric == "F Current /\nF SPR 40%", j = "v08") |>
  flextable::color(color = "red", i = ~ v19 > 1 & Metric == "F Current /\nF SPR 40%", j = "v19") |>
- flextable::color(color = "red", i = ~ v28 > 1 & Metric == "F Current /\nF SPR 40%", j = "v28") |>
  flextable::color(color = "red", i = ~ v31 > 1 & Metric == "F Current /\nF SPR 40%", j = "v31") |>
  flextable::align(align = "center", part = "all") |>
  flextable::fontsize(size = 11, part = "all") |>
@@ -424,7 +422,6 @@ tbl_msra <- msra_summary |>
  flextable::color(color = "red", i = ~ v01 < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "v01") |>
  flextable::color(color = "red", i = ~ v08 < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "v08") |>
  flextable::color(color = "red", i = ~ v19 < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "v19") |>
- flextable::color(color = "red", i = ~ v28 < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "v28") |>
  flextable::color(color = "red", i = ~ v31 < 0.75 & Metric == "SSB 2022 /\nSSB SPR 40%", j = "v31") |>
  flextable::font(fontname = "Times New Roman", part = "all")
 

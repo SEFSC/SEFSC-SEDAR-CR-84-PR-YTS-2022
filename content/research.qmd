@@ -1,5 +1,5 @@
 ---
-  title: "SEDAR Panel Research Recommendations"
+  title: "Assessment Process Research Recommendations"
 ---
 
 To mitigate some of the data uncertainties it is recommended to:
@@ -16,7 +16,7 @@ To mitigate some of the data uncertainties it is recommended to:
 
 -   Develop and evaluate model ensembles or uncertainty grids to guide catch advice under different plausible scenarios.
 
--   Investigate stock connectivity to better understand local vs. regional recruitment dynamics.
+-   Investigate stock connectivity to better understand local versus regional recruitment dynamics and their implications for informing steepness.
 
 -   Research methods, including simulations, to “right-size” model complexity to match data availability, avoiding overparameterization in data-limited contexts.
 
@@ -28,4 +28,4 @@ To mitigate some of the data uncertainties it is recommended to:
 
 -   The use of initial catch in this assessment was intended to inform an initial starting depletion for the population. However, model evaluations show it also strongly informs maximum sustainable yield estimates. This is an undesirable outcome and additional research into how to decouple these impacts would significantly improve model result reliability. 
 
--   Investigate data on the sizes of discarded fish to inform size-based retention. Explore parameterizing retention to improve selectivity of the commercial fleet and interpret the apparent high selectivity of larger individuals that are poorly estimated by the current models.
+-   Investigate data on the lengths of discarded fish to inform length-based retention. Explore parameterizing retention to improve selectivity of the commercial fleet and interpret the apparent high selectivity of larger individuals that are poorly estimated by the current models.

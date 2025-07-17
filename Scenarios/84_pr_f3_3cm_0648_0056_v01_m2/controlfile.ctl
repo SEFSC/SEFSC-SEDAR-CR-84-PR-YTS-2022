@@ -1,5 +1,5 @@
 #C file created using an r4ss function
-#C file write time: 2025-05-21  14:22:56
+#C file write time: 2025-07-16  14:10:27
 #
 0 # 0 means do not read wtatage.ss; 1 means read and usewtatage.ss and also read and use growth parameters
 1 #_N_Growth_Patterns
@@ -50,32 +50,32 @@
 #
 #_growth_parms
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE	env_var&link	dev_link	dev_minyr	dev_maxyr	dev_PH	Block	Block_Fxn
-0.001	   2	    0.208	    -2.92	0.22	0	 -1	0	0	0	0	0	0	0	#_NatM_p_1_Fem_GP_1  
-  -50	 100	    0.001	        0	  10	0	 -3	0	0	0	0	0	0	0	#_L_at_Amin_Fem_GP_1 
-    1	 500	     42.4	     42.4	  10	0	 -2	0	0	0	0	0	0	0	#_L_at_Amax_Fem_GP_1 
-0.001	   2	     0.23	     0.23	0.05	0	 -3	0	0	0	0	0	0	0	#_VonBert_K_Fem_GP_1 
-0.001	   5	     0.15	     0.15	 0.5	0	 -4	0	0	0	0	0	0	0	#_CV_young_Fem_GP_1  
-0.001	   5	     0.15	     0.15	 0.5	0	 -4	0	0	0	0	0	0	0	#_CV_old_Fem_GP_1    
-    0	   3	 2.93e-05	    1e-05	  99	0	-99	0	0	0	0	0	0	0	#_Wtlen_1_Fem_GP_1   
-    2	   4	   2.8642	        3	  99	0	-99	0	0	0	0	0	0	0	#_Wtlen_2_Fem_GP_1   
-1e-04	1000	     19.4	     19.4	  99	0	-99	0	0	0	0	0	0	0	#_Mat50%_Fem_GP_1    
-   -2	   4	-0.499057	-0.499057	  99	0	-99	0	0	0	0	0	0	0	#_Mat_slope_Fem_GP_1 
-    0	   3	    1e-05	    1e-05	 0.8	0	 -3	0	0	0	0	0	0	0	#_Eggs_alpha_Fem_GP_1
-    0	  10	        3	        3	 0.8	0	 -3	0	0	0	0	0	0	0	#_Eggs_beta_Fem_GP_1 
-0.001	   2	    0.208	    -2.92	0.22	0	 -1	0	0	0	0	0	0	0	#_NatM_p_1_Mal_GP_1  
-  -50	 100	    0.001	        0	  10	0	 -3	0	0	0	0	0	0	0	#_L_at_Amin_Mal_GP_1 
-    1	 500	     42.4	     42.4	  10	0	 -2	0	0	0	0	0	0	0	#_L_at_Amax_Mal_GP_1 
-0.001	   2	     0.23	     0.23	0.05	0	 -3	0	0	0	0	0	0	0	#_VonBert_K_Mal_GP_1 
-0.001	   5	     0.15	     0.15	 0.5	0	 -4	0	0	0	0	0	0	0	#_CV_young_Mal_GP_1  
-0.001	   5	     0.15	     0.15	 0.5	0	 -4	0	0	0	0	0	0	0	#_CV_old_Mal_GP_1    
-    0	   3	 2.93e-05	    1e-05	  99	0	-99	0	0	0	0	0	0	0	#_Wtlen_1_Mal_GP_1   
-    2	   4	   2.8642	        3	  99	0	-99	0	0	0	0	0	0	0	#_Wtlen_2_Mal_GP_1  
+0.001	   2	    0.208	    -2.92	0.22	0	 -1	0	0	0	0	0	0	0	#_NatM_p_1_Fem_GP_1            
+  -50	 100	    0.001	        0	  10	0	 -3	0	0	0	0	0	0	0	#_L_at_Amin_Fem_GP_1           
+    1	 500	     42.4	     42.4	  10	0	 -2	0	0	0	0	0	0	0	#_L_at_Amax_Fem_GP_1           
+0.001	   2	     0.23	     0.23	0.05	0	 -3	0	0	0	0	0	0	0	#_VonBert_K_Fem_GP_1           
+0.001	   5	     0.15	     0.15	 0.5	0	 -4	0	0	0	0	0	0	0	#_CV_young_Fem_GP_1            
+0.001	   5	     0.15	     0.15	 0.5	0	 -4	0	0	0	0	0	0	0	#_CV_old_Fem_GP_1              
+    0	   3	 2.93e-05	    1e-05	  99	0	-99	0	0	0	0	0	0	0	#_Wtlen_1_Fem_GP_1             
+    2	   4	   2.8642	        3	  99	0	-99	0	0	0	0	0	0	0	#_Wtlen_2_Fem_GP_1             
+1e-04	1000	     19.4	     19.4	  99	0	-99	0	0	0	0	0	0	0	#_Mat50%_Fem_GP_1              
+   -2	   4	-0.499057	-0.499057	  99	0	-99	0	0	0	0	0	0	0	#_Mat_slope_Fem_GP_1           
+    0	   3	    1e-05	    1e-05	 0.8	0	 -3	0	0	0	0	0	0	0	#_Eggs_alpha_Fem_GP_1          
+    0	  10	        3	        3	 0.8	0	 -3	0	0	0	0	0	0	0	#_Eggs_beta_Fem_GP_1           
+0.001	   2	    0.208	    -2.92	0.22	0	 -1	0	0	0	0	0	0	0	#_NatM_p_1_Mal_GP_1            
+  -50	 100	    0.001	        0	  10	0	 -3	0	0	0	0	0	0	0	#_L_at_Amin_Mal_GP_1           
+    1	 500	     42.4	     42.4	  10	0	 -2	0	0	0	0	0	0	0	#_L_at_Amax_Mal_GP_1           
+0.001	   2	     0.23	     0.23	0.05	0	 -3	0	0	0	0	0	0	0	#_VonBert_K_Mal_GP_1           
+0.001	   5	     0.15	     0.15	 0.5	0	 -4	0	0	0	0	0	0	0	#_CV_young_Mal_GP_1            
+0.001	   5	     0.15	     0.15	 0.5	0	 -4	0	0	0	0	0	0	0	#_CV_old_Mal_GP_1              
+    0	   3	 2.93e-05	    1e-05	  99	0	-99	0	0	0	0	0	0	0	#_Wtlen_1_Mal_GP_1             
+    2	   4	   2.8642	        3	  99	0	-99	0	0	0	0	0	0	0	#_Wtlen_2_Mal_GP_1             
   0.1	  10	        1	        1	   1	0	 -1	0	0	0	0	0	0	0	#_RecrDist_GP_1_area_1_month_1 
   0.1	  10	        1	        1	   1	0	 -1	0	0	0	0	0	0	0	#_RecrDist_GP_1_area_1_month_4 
   0.1	  10	        1	        1	   1	0	 -1	0	0	0	0	0	0	0	#_RecrDist_GP_1_area_1_month_7 
-  0.1	  10	        1	        1	   1	0	 -1	0	0	0	0	0	0	0	#_RecrDist_GP_1_area_1_month_10	
-  0.1	  10	        1	        1	   1	0	 -1	0	0	0	0	0	0	0	#_CohortGrowDev      
- 0.01	0.99	      0.5	      0.5	 0.5	0	-99	0	0	0	0	0	0	0	#_FracFemale_GP_1    
+  0.1	  10	        1	        1	   1	0	 -1	0	0	0	0	0	0	0	#_RecrDist_GP_1_area_1_month_10
+  0.1	  10	        1	        1	   1	0	 -1	0	0	0	0	0	0	0	#_CohortGrowDev                
+ 0.01	0.99	      0.5	      0.5	 0.5	0	-99	0	0	0	0	0	0	0	#_FracFemale_GP_1              
 #_no timevary MG parameters
 #
 #_seasonal_effects_on_biology_parms
@@ -83,7 +83,7 @@
 #_ LO HI INIT PRIOR PR_SD PR_type PHASE
 #_Cond -2 2 0 0 -1 99 -2 #_placeholder when no seasonal MG parameters
 #
-3 #_Spawner-Recruitment; 2=Ricker; 3=std_B-H; 4=SCAA;5=Hockey; 6=B-H_flattop; 7=survival_3Parm;8=Shepard_3Parm
+3 #_Spawner-Recruitment; 2=Ricker (2 parms); 3=std_B-H(2); 4=SCAA(2);5=Hockey(3); 6=B-H_flattop(2); 7=Survival(3);8=Shepard(3);9=Ricker_Power(3);10=B-H_a,b(4)
 0 # 0/1 to use steepness in initial equ recruitment calculation
 0 # future feature: 0/1 to make realized sigmaR a function of SR curvature
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE	env-var	use_dev	dev_mnyr	dev_mxyr	dev_PH	Block	Blk_Fxn # parm_name
@@ -120,9 +120,10 @@
 #Fishing Mortality info
 0.03 # F ballpark
 -1999 # F ballpark year (neg value to disable)
-3 # F_Method:  1=Pope; 2=instan. F; 3=hybrid (hybrid is recommended)
+2 # F_Method:  1=Pope; 2=instan. F; 3=hybrid (hybrid is recommended)
 4 # max F or harvest rate, depends on F_Method
-4 # N iterations for tuning F in hybrid method (recommend 3 to 7)
+#_overall start F value; overall phase; N detailed inputs to read
+0.05 1 0 #_F_setup
 #
 #_initial_F_parms
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE

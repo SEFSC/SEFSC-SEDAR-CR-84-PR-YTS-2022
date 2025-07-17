@@ -1,8 +1,7 @@
 library(foreach)
 
 # Specify pattern
-pattern <- "03_m3|07_m3|19a_m3|26a_m3|29a_m3|31a_m3"
-pattern <- "19a_m3_s"
+pattern <- "84_pr_f3_"
 
 # Get folder names ####
 full_names <- list.files(
@@ -23,6 +22,21 @@ foreach::foreach(i = seq_along(full_names)) %do% {
                           datlist = dat, verbose = FALSE)
   fcast <- r4ss::SS_readforecast(file = here::here(full_names[i], "forecast.ss"),
                             verbose = FALSE)
+  
+  
+  
+  ctl$F_Method
+  ctl$F_Method = 2
+  
+  ctl$maxF
+  ctl$maxF = 4
+  ctl$maxF
+  
+  ctl$F_setup
+  ctl$F_setup[1] = 0.05
+  ctl$F_setup[2] = 1.00
+  ctl$F_setup[3] = 0.00
+  ctl$F_setup
   
   # dat$maximum_size = 56
   
@@ -53,9 +67,9 @@ foreach::foreach(i = seq_along(full_names)) %do% {
   # fcast$Btarget
   # 
   # # Higher catch uncertainty
-  dat$catch[1, 5]
-  dat$catch[1, 5] = 0.3
-  dat$catch[1, 5]
+  # dat$catch[1, 5]
+  # dat$catch[1, 5] = 0.3
+  # dat$catch[1, 5]
   # 
   # dat$catch[1, 4]
   # dat$catch[1, 4] = 168.3114
@@ -125,20 +139,20 @@ foreach::foreach(i = seq_along(full_names)) %do% {
   # ctl$init_F[1, 3] = 1.2
   
   # ctl$do_recdev = 1
-  
-  r4ss::SS_writedat(
-    datlist = dat,
-    outfile = here::here(full_names[i], start$datfile),
-    overwrite = TRUE,
-    verbose = FALSE
+  # 
+  # r4ss::SS_writedat(
+  #   datlist = dat,
+  #   outfile = here::here(full_names[i], start$datfile),
+  #   overwrite = TRUE,
+  #   verbose = FALSE
+  # )
+
+  r4ss::SS_writectl(
+    ctllist = ctl,
+    outfile = here::here(full_names[i], start$ctlfile),
+    overwrite = TRUE
   )
 
-  # r4ss::SS_writectl(
-  #   ctllist = ctl,
-  #   outfile = here::here(full_names[i], start$ctlfile),
-  #   overwrite = TRUE
-  # )
-  
   # r4ss::SS_writeforecast(
   #   fcast,
   #   dir = here::here(full_names[i]),

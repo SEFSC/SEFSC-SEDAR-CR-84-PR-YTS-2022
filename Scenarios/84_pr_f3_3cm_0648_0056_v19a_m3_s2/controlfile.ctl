@@ -1,5 +1,5 @@
 #C file created using an r4ss function
-#C file write time: 2025-06-02  15:06:51
+#C file write time: 2025-07-16  14:10:32
 #
 0 # 0 means do not read wtatage.ss; 1 means read and usewtatage.ss and also read and use growth parameters
 1 #_N_Growth_Patterns
@@ -83,7 +83,7 @@
 #_ LO HI INIT PRIOR PR_SD PR_type PHASE
 #_Cond -2 2 0 0 -1 99 -2 #_placeholder when no seasonal MG parameters
 #
-3 #_Spawner-Recruitment; 2=Ricker; 3=std_B-H; 4=SCAA;5=Hockey; 6=B-H_flattop; 7=survival_3Parm;8=Shepard_3Parm
+3 #_Spawner-Recruitment; 2=Ricker (2 parms); 3=std_B-H(2); 4=SCAA(2);5=Hockey(3); 6=B-H_flattop(2); 7=Survival(3);8=Shepard(3);9=Ricker_Power(3);10=B-H_a,b(4)
 0 # 0/1 to use steepness in initial equ recruitment calculation
 0 # future feature: 0/1 to make realized sigmaR a function of SR curvature
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE	env-var	use_dev	dev_mnyr	dev_mxyr	dev_PH	Block	Blk_Fxn # parm_name
@@ -120,9 +120,10 @@
 #Fishing Mortality info
 0.03 # F ballpark
 -1999 # F ballpark year (neg value to disable)
-3 # F_Method:  1=Pope; 2=instan. F; 3=hybrid (hybrid is recommended)
+2 # F_Method:  1=Pope; 2=instan. F; 3=hybrid (hybrid is recommended)
 4 # max F or harvest rate, depends on F_Method
-4 # N iterations for tuning F in hybrid method (recommend 3 to 7)
+#_overall start F value; overall phase; N detailed inputs to read
+0.05 1 0 #_F_setup
 #
 #_initial_F_parms
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE
@@ -148,20 +149,19 @@
 0	0	0	0	#_2 NCRMP     
 #
 #_SizeSelex
-# 1   Commercial LenSelex
-             6            46       29.1302            29            99             0          3          0          0          0          0          0          0          0  #  Size_DblN_peak_Commercial(1)
-           -15            15            15            15            99             0         -1          0          0          0          0          0          0          0  #  Size_DblN_top_logit_Commercial(1)
-            -4            12       3.43743       3.58539            99             0          3          0          0          0          0          0          0          0  #  Size_DblN_ascend_se_Commercial(1)
-           -15             6           -15           -15            99             0         -1          0          0          0          0          0          0          0  #  Size_DblN_descend_se_Commercial(1)
-          -999            15           -10           -10            99             0         -2          0          0          0          0          0          0          0  #  Size_DblN_start_logit_Commercial(1)
-           -15            20            15            15            99             0         -1          0          0          0          0          0          0          0  #  Size_DblN_end_logit_Commercial(1)
-# 2   NCRMP LenSelex
-             6            48       17.7698             7            99             0          3          0          0          0          0          0          0          0  #  Size_DblN_peak_NCRMP(2)
-           -15            15      -1.50284            15            99             0          1          0          0          0          0          0          0          0  #  Size_DblN_top_logit_NCRMP(2)
-            -4            12        4.5254        4.5254            99             0         -3          0          0          0          0          0          0          0  #  Size_DblN_ascend_se_NCRMP(2)
-           -15             6           -15           -15            99             0         -1          0          0          0          0          0          0          0  #  Size_DblN_descend_se_NCRMP(2)
-          -999            15           -10           -10            99             0         -2          0          0          0          0          0          0          0  #  Size_DblN_start_logit_NCRMP(2)
-           -15            20     -0.658561            15            99             0          1          0          0          0          0          0          0          0  #  Size_DblN_end_logit_NCRMP(2)
+#_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE	env-var	use_dev	dev_mnyr	dev_mxyr	dev_PH	Block	Blk_Fxn  #  parm_name
+   6	46	  29.1302	     29	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_1_Commercial(1)
+ -15	15	       15	     15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_2_Commercial(1)
+  -4	12	  3.43743	3.58539	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_3_Commercial(1)
+ -15	 6	      -15	    -15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_4_Commercial(1)
+-999	15	      -10	    -10	99	0	-2	0	0	0	0	0	0	0	#_SizeSel_P_5_Commercial(1)
+ -15	20	       15	     15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_6_Commercial(1)
+   6	48	  17.7698	      7	99	0	 3	0	0	0	0	0	0	0	#_SizeSel_P_1_NCRMP(2)     
+ -15	15	 -1.50284	     15	99	0	 1	0	0	0	0	0	0	0	#_SizeSel_P_2_NCRMP(2)     
+  -4	12	   4.5254	 4.5254	99	0	-3	0	0	0	0	0	0	0	#_SizeSel_P_3_NCRMP(2)     
+ -15	 6	      -15	    -15	99	0	-1	0	0	0	0	0	0	0	#_SizeSel_P_4_NCRMP(2)     
+-999	15	      -10	    -10	99	0	-2	0	0	0	0	0	0	0	#_SizeSel_P_5_NCRMP(2)     
+ -15	20	-0.658561	     15	99	0	 1	0	0	0	0	0	0	0	#_SizeSel_P_6_NCRMP(2)     
 #_AgeSelex
 #_No age_selex_parm
 #_no timevary selex parameters
